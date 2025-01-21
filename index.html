@@ -1,1 +1,367 @@
-Test index
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <script>
+            const pageConfig = {
+                title: "Coding Accelerator - Harry Jmg",
+                description: "L'objectif est de devenir libre en utilisant ses compétences en code.",
+                mixpanelEvent: "Visits Product",
+                mixpanelPageName: "Product Page"
+            };
+
+            document.title = pageConfig.title;
+
+            const metaDescription = document.createElement('meta');
+            metaDescription.name = "description";
+            metaDescription.content = pageConfig.description;
+            document.head.appendChild(metaDescription);
+        </script>
+
+        <link rel="stylesheet/less" type="text/css" href="/assets/styles.less" />
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+        <script>
+            // Fonction pour vérifier si un élément est visible dans la fenêtre
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Appliquer ou retirer l'animation uniquement si elle n'a pas encore été jouée
+            function onScroll() {
+                const spotlightTitle = document.querySelector('.spotlight-title');
+                if (spotlightTitle && isElementInViewport(spotlightTitle)) {
+                    // Ajouter une classe pour jouer l'animation une seule fois
+                    if (!spotlightTitle.classList.contains('animation-played')) {
+                        spotlightTitle.classList.add('animate-spotlight', 'animation-played');
+                    }
+                }
+            }
+
+            // Ajouter l'écouteur de défilement
+            window.addEventListener('scroll', onScroll);        </script>
+    </head>
+
+    <body style="background: hsl(274deg 16% 8%); z-index: -5; position: relative;">
+
+        <section class="article dark" id="hero">
+            <div class="hero-gradient"></div>
+            <svg class="hero-svg" width="100%" height="303" viewBox="0 0 1440 303" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="Hero__Swoop-sc-1sl265n-2 focicy" style="display: block; overflow: visible;"><path d="M339 122C220.647 106.212 176.609 -12.2323 58 1.50005C29.0671 4.84984 -14.5 19.0001 -14.5 19.0001V303H1443V184C1443 184 1296.24 217.673 1200.5 221C974.265 228.862 864.366 79.4709 638 81.0001C520.143 81.7962 455.825 137.584 339 122Z" fill="hsl(274, 16%, 8%)"></path></svg>
+
+            <div class="hero-stuff">
+                <div class="hero-spacer"></div>
+                <h1 id="first-words" class="head">
+                    Dites stop à l'autopilote.
+                </h1>
+                <div style="min-width: 24px;min-height: 24px;"></div>
+
+                <h2>
+                    Un programme simple en 30 jours pour reprendre les commandes, renouer avec l'essentiel et illuminer votre vie.
+                </h2>
+
+                <div style="min-width: 72px;min-height: 72px;"></div>
+                
+                <div class="creator-info">
+                    <img src="/assets/jmtlj.jpg" alt="Harry Jmg" class="profile-pic">
+                    <span class="creator-text"> Conduit par 
+                        <a href="https://youtube.com/c/HarryJmg" target="_blank" rel="noopener noreferrer">
+                            Harry Gueguen
+                        </a>
+                    </span>
+                </div>
+                <div style="min-width: 36px;min-height: 36px;"></div>
+            </div>
+        </section>
+
+        <section class="article dark" id="intro">
+            <div class="container">
+                <h2>
+                    Vous pouvez changer, <strong class="gradient-yellow">promis.</strong>
+                </h2>
+                <p class="lead">
+                    Pour beaucoup d'entre nous, trouver du calme, de la paix et de la clarté dans le monde moderne est devenu un vrai challenge.
+                </p>
+                <p class="lead">
+                    Oui c'est vrai, il y a la méditation occasionnelle qui permet à certains d'avoir un peu de répit. Mais il suffit de rouvrir les yeux pour être à nouveau submergé(e) : les urgences, les notifications, les attentes des autres et du monde. Ça n'en finit tout simplement jamais.
+                </p>
+                <p class="lead">
+                    Cette spirale continue nous éloigne de notre équilibre intérieur, ce point d’ancrage qui devrait être notre priorité de chaque instant. Combien de personnes se sentent perdues aujourd'hui ?
+                </p>
+                <p class="lead">
+                    Et pourtant, la vraie sérénité, celle dont les bienfaits sont inestimables, est accessible. Le sentiment d’être submergé est souvent la conséquence de mécanismes invisibles devenus des habitudes, de schémas inconscients qu'il suffit d'éclairer pour commencer à les changer.
+                </p>
+                <h2>
+                    Mais ce qui vous contrôle <span class="muted-italic">reste caché...</span>
+                </h2>
+                <p class="lead">
+                    Quand il s'agit de retrouver la sérénité, beaucoup se tournent vers la méditation, des livres de developpement personnel ou des routines populaires trouvées sur instagram. Mais c'est comme coller des pansements sur un os cassé : ça ne règle rien.
+                </p>
+                <p class="lead">
+                    Pourquoi ? Parce que ces tentatives ne touchent pas aux véritables causes du problème : les mécanismes profonds qui influencent vos pensées, vos émotions et vos comportements. Vous pouvez accumuler des “outils” pendant des années sans jamais comprendre pourquoi vous restez bloqué(e) dans les mêmes schémas.
+                </p>
+                <p class="lead">
+                    Ça ne fonctionne pas. Il est temps de dépasser le superficiel et de vous attaquer aux fondations de votre équilibre intérieur. 
+                </p>
+
+                <h2>
+                    <strong class="gradient-yellow">La sérénité peut s'apprendre.</strong>
+                </h2>
+
+                <p class="lead">
+                    Beaucoup pensent que retrouver la sérénité et la clarté est une question de prédisposition, ou que certaines personnes “ont ça en elles” naturellement. Mais ce n’est pas vrai.
+                </p>
+
+                <p class="lead">
+                    Comme tout dans la vie, la paix intérieure s’apprend. Et comme toute compétence, elle demande de comprendre quelques bases. Ce qui semblait pesant et insurmontable peut devenir léger et facile, et votre vie peut prendre de nouvelles couleurs.
+                </p>
+
+                <p class="lead">
+                    J'ai créé un parcours guidé sur 30 jours pour vous aider à (re)découvrir ces bases et à les appliquer dans votre quotidien. Tout ne changera pas du jour au lendemain, mais je peux vous promettre que vous apprendrez à gérer vos émotions et à canaliser votre énergie vers ce qui compte vraiment pour vous.
+                </p>
+
+                <p class="lead">
+                    Ce parcours, je l’ai appelé...
+                </p>
+
+            </div>
+        </section>
+
+        <!-- 
+        ***********************************
+        *                                 
+        *         🌟   Produit   🌟        
+        *                                 
+        ***********************************
+        -->
+
+        <div style="background: hsl(274deg 16% 8%);">
+            <section class="article dark" id="produit-spotlight">
+                <svg class="spotlight-bg-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2986 393"><path fill="hsl(267deg 50% 11%)" d="M573.5 94C346.756 91.146.5 0 .5 0v393h2985V222s-334.14-75.852-530.5-94c-222.28-20.544-346.81 47.19-570 43-327.93-6.157-501.55-136.097-829.5-131.5-189.414 2.655-292.583 56.884-482 54.5z"></path></svg>
+                <div class="spotlight-lights-wrapper">
+                    <div class="light-1-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70vw" fill="none" viewBox="0 0 2441 2224" class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK" style="transform: rotateY(180deg);"><g filter="url(#spotlight-left0_f)"><path fill="url(#spotlight-left0_linear)" fill-opacity="0.5" d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><g filter="url(#spotlight-left1_f)"><path fill="url(#spotlight-left1_linear)" d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z"></path></g><g filter="url(#spotlight-left2_f)"><path fill="url(#spotlight-left2_linear)" fill-opacity="0.2" d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z"></path></g><g filter="url(#spotlight-left3_f)"><path fill="url(#spotlight-left3_linear)" d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><defs><filter id="spotlight-left0_f" width="1641.84" height="1429" x="400.786" y="400.897" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur></filter><filter id="spotlight-left1_f" width="2439.71" height="2222.09" x="0.786" y="0.924" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur></filter><filter id="spotlight-left2_f" width="1735.7" height="1638.64" x="418.941" y="333.769" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur></filter><filter id="spotlight-left3_f" width="1574.8" height="1357.97" x="425.787" y="426.121" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5"></feGaussianBlur></filter><linearGradient id="spotlight-left0_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left1_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left2_linear" x1="921.666" x2="1972.19" y1="753.837" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left3_linear" x1="1422" x2="1971.74" y1="1225" y2="1745.89" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop><stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient></defs></svg>
+                    </div>
+                    <div class="light-2-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60vw" fill="none" viewBox="0 0 2441 2224" class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK"><g filter="url(#spotlight-right0_f)"><path fill="url(#spotlight-right0_linear)" fill-opacity="0.5" d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><g filter="url(#spotlight-right1_f)"><path fill="url(#spotlight-right1_linear)" d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z"></path></g><g filter="url(#spotlight-right2_f)"><path fill="url(#spotlight-right2_linear)" fill-opacity="0.2" d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z"></path></g><g filter="url(#spotlight-right3_f)"><path fill="url(#spotlight-right3_linear)" d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><defs><filter id="spotlight-right0_f" width="1641.84" height="1429" x="400.786" y="400.897" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur></filter><filter id="spotlight-right1_f" width="2439.71" height="2222.09" x="0.786" y="0.924" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur></filter><filter id="spotlight-right2_f" width="1735.7" height="1638.64" x="418.941" y="333.769" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur></filter><filter id="spotlight-right3_f" width="1574.8" height="1357.97" x="425.787" y="426.121" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5"></feGaussianBlur></filter><linearGradient id="spotlight-right0_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right1_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right2_linear" x1="921.666" x2="1972.19" y1="753.837" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right3_linear" x1="1422" x2="1971.74" y1="1225" y2="1745.89" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop><stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient></defs></svg>
+                    </div>
+                </div>
+                <svg class="spotlight-fg-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2839 579"><g clip-path="url(#clip0)"><path fill="hsl(274deg 16% 8%)" d="M2095 482c344.77-31.423 744-482 744-482v578.5H-127s0-214 331-256C392.489 298.583 452.227 451.156 625.5 482c332.323 59.155 508.95-108.5 846.5-108.5 237.5 0 374.02 131.192 623 108.5z"></path></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0H2839V579H0z"></path></clipPath></defs></svg>
+            
+                <div class="spotlight-title-wrapper">
+                    <div class="spotlight-title-wrapper-2">
+                        <h1 class="spotlight-title">
+                            <span class="spotlight-title-line-0">
+                                il est là !<br><br>
+                            </span>
+                            <span class="spotlight-title-line-1">
+                                Le bus<br>
+                            </span>
+                        </h1>
+
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <section class="article dark" id="spacer">
+            <div class="container">
+                <div style="height: 100px;"></div>
+            </div>
+        </section>
+
+        <section class="article dark" id="companys">
+            <div class="container">
+                <h2>Ils me font déjà confiance</h2>
+                <script src="https://widget.senja.io/widget/21637404-6c30-49ac-9121-5869f7d8f1bb/platform.js" type="text/javascript" async></script>
+                <div class="senja-embed" data-id="21637404-6c30-49ac-9121-5869f7d8f1bb" data-mode="shadow" data-lazyload="false" style="display: block;"></div>
+            </div>
+        </section>
+
+        <section class="transition-section up">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="hsl(274deg 16% 8%)" d="M0,192C360,96,720,288,1080,192C1260,144,1440,80,1440,80L1440,320L0,320Z"></path>
+            </svg>
+        </section>
+
+
+        <section class="article dark" id="spacer">
+            <div class="container">
+                <div style="height: 100px;"></div>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">1) CTA BUY</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">2) OFFRIR / TEAMS</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">3) WHO AM I</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">4) 3 REVIEWS SELECTED</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">5) LE TRAJET DU BUS</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">6) LES BONUS</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">7) UN AUTRE AVIS STYLÉ</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">8) CTA AGAIN</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">9) UN AUTRE AVIS STYLÉ</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">10) FAQ</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">11) WALL D'AVIS</strong>
+                </h2>
+            </div>
+        </section>
+
+        <section class="article dark" id="produit">
+            <div class="container">
+                <h2>
+                    <strong class="gradient-yellow">12) FOOTER</strong>
+                </h2>
+            </div>
+        </section>
+
+        
+
+        <section class="transition-section up">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="hsl(274deg 16% 8%)" d="M0,192C360,96,720,288,1080,192C1260,144,1440,80,1440,80L1440,320L0,320Z"></path>
+            </svg>
+        </section>
+        
+        <footer></footer>
+        <script>
+            fetch('/partials/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                });
+        </script>
+
+        <a class="btn_cta" href="#cta-candidature" id="floating-button">
+            <span>
+                → Lets go
+            </span>
+        </a>
+    </body>
+
+    <script>
+        // Définir la date limite au vendredi 6 décembre 2024 à minuit
+        const deadline = new Date('2024-12-06T23:59:59');
+    
+        // Fonction pour calculer et afficher le temps restant
+        function updateCountdown() {
+            const now = new Date();
+            const timeRemaining = deadline - now;
+    
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    
+                // Met à jour le contenu du timer
+                document.getElementById("countdown-timer").innerText = 
+                    `Temps restant : ${days}j ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                // Affiche un message lorsque le délai est dépassé
+                document.getElementById("countdown-timer").innerText = "L'offre est terminée.";
+                clearInterval(countdownInterval); // Stop le timer
+    
+                // Logique d'affichage des CTA
+                const ctaFlash = document.getElementById("cta-flash");
+                const ctaCandidature = document.getElementById("cta-candidature");
+                const instructions = document.getElementById("instructions");
+    
+                if (ctaFlash && ctaCandidature) {
+                    ctaFlash.style.display = "none"; // Cacher l'offre flash
+                    ctaCandidature.style.display = "block"; // Afficher la candidature normale
+                    instructions.style.display = "none";
+                }
+            }
+        }
+    
+        // Met à jour le timer toutes les secondes
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    
+        // Appel initial pour éviter le délai d'une seconde
+        updateCountdown();
+    </script>
+</html>
