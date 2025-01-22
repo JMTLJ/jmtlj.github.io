@@ -108,6 +108,10 @@ a {
     text-underline-offset: 2px;
 }
 
+em {
+    font-style: italic;
+}
+
 .spacer-8 {
     min-width: 8px;
     min-height: 8px;
@@ -585,12 +589,22 @@ section.hero-wrapper {
                     .line-two {
                         display: block;
                         font-size: min(14.5vw, 101px);
+
+                        .thin {
+                            font-weight: 300;
+                            font-size: 0.75em;
+                        }
                     }
 
                     .line-three {
                         display: block;
                         font-size: min(14vw, 97px);
                         letter-spacing: -0.1vw;
+
+                        .thin {
+                            font-weight: 300;
+                            font-size: 0.75em;
+                        }
                     }
                 }
             }
