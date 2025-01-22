@@ -1,9 +1,33 @@
 @color-scheme: dark;
 
-@font-weight-bold: 600;
-@font-weight-semibold: 500;
-@font-weight-regular: 400;
+@font-weight-thin: 100;
+@font-weight-extralight: 200;
 @font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-semibold: 600;
+@font-weight-bold: 700;
+
+@font-face {
+    font-family: 'Wotfard';
+    font-style: normal;
+    font-weight: @font-weight-thin;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-thin-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    font-style: normal;
+    font-weight: @font-weight-extralight;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-extralight-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    font-style: normal;
+    font-weight: @font-weight-light;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-light-webfont.woff2') format('woff2');
+}
 
 @font-face {
     font-family: 'Wotfard';
@@ -14,16 +38,23 @@
 
 @font-face {
     font-family: 'Wotfard';
-    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
-    font-weight: @font-weight-bold;
     font-style: normal;
+    font-weight: @font-weight-medium;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-medium-webfont.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Wotfard';
-    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-semibold-webfont.woff2') format('woff2');
-    font-weight: @font-weight-semibold;
     font-style: normal;
+    font-weight: @font-weight-semibold;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-semibold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    font-style: normal;
+    font-weight: @font-weight-bold;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
 }
 
 @import (inline) url('https://fonts.cdnfonts.com/css/sriracha');
