@@ -26,6 +26,8 @@
     font-style: normal;
 }
 
+@import (inline) url('https://fonts.cdnfonts.com/css/sriracha');
+
 @font-family: 'Wotfard';
 @font-family-mono: 'League Mono', 'Fira Mono', monospace;
 
@@ -78,7 +80,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-    font-weight: @font-weight-bold;
+    font-weight: @font-weight-semibold;
 }
 
 * {
@@ -124,6 +126,11 @@ a {
 .spacer-36 {
     min-width: 36px;
     min-height: 36px;
+}
+
+.spacer-64 {
+    min-width: 64px;
+    min-height: 64px;
 }
 
 .spacer-72 {
@@ -340,3 +347,103 @@ section.hero-wrapper {
         }
     }
 }
+
+.pages-content {
+    overflow: hidden;
+ 
+    .max-width-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    .letter-wrapper {
+        font-size: 20px;
+        max-width: 700px;
+    
+        p {
+            margin-bottom: 1.65em;
+            line-height: 1.45;
+        }
+    
+        p.standout-text {
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+
+        .gold-standout {
+            background-color: rgb(255, 178, 62);
+            background-image: linear-gradient(268.67deg, rgb(255, 255, 255) 3.43%, rgb(255, 240, 102) 15.69%, rgb(255, 163, 26) 55.54%, rgb(255, 0, 115) 99%);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .highlighted-text {
+            position: relative;
+            padding: 4px 8px;
+            margin-left: -8px;
+            margin-right: -4px;
+            color: rgb(255, 170, 51);
+        }
+
+        .text-with-image {
+            position: relative;
+            display: inline-block;
+            text-shadow: rgba(21, 17, 24, 0.5) 0px 1px 1px, rgba(21, 17, 24, 0.5) 0px 1px 4px, rgb(21, 17, 24) 0px 0px 6px;
+
+            img {
+                display: block;
+                margin: auto;
+                user-select: none;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                z-index: -1;
+            }
+
+            .long-underline {
+                transform: translateY(45%) translateX(-4px) rotate(0.5deg);
+                width: 100%;
+            }
+
+            .double-underline {
+                transform: translateY(40%);
+                width: 75%;
+                right: 0px;
+            }
+        }
+
+        .stubby-arrow {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 30px;
+            top: 0px;
+            left: 0px;
+            user-select: none;
+            transform: translate(calc(-100% - 12px), 8px);
+        }
+
+        .gold-gradient-text {
+            display: inline-block;
+            background-color: rgb(255, 178, 62);
+            background-image: linear-gradient(-268.67deg, rgb(255, 240, 102), rgb(255, 163, 26));
+            background-size: 100%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sly-em {
+            font-family: Sriracha;
+            letter-spacing: -0.25px;
+            color: @color-gray-700;
+            font-style: normal;
+        }
+    }
+}
+
