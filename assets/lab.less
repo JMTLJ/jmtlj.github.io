@@ -1,20 +1,19 @@
 @color-scheme: dark;
 
-@font-weight-bold: 500;
+@font-weight-bold: 700;
 @font-weight-medium: 400;
 @font-weight-light: 300;
 
+@import (inline) url('https://fonts.cdnfonts.com/css/wotfard');
+
 @font-face {
     font-family: 'Wotfard';
-    src: url('/assets/fonts/wotfard-regular-webfont.woff2') format('woff2'),
-            url('/assets/fonts/wotfard-regular-webfont.eot') format('embedded-opentype'),
-            url('/assets/fonts/wotfard-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
+    src: url('/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
+    font-weight: @font-weight-bold;
     font-style: normal;
-    font-display: swap;
 }
 
-@font-family: 'Wotfard', Futura, -apple-system, sans-serif;
+@font-family: 'Wotfard';
 @font-family-mono: 'League Mono', 'Fira Mono', monospace;
 
 @color-text: hsl(0deg, 0%, 100%);
@@ -249,7 +248,7 @@ section.hero-wrapper {
 
         .hero-heading {
             font-size: min(72px, 8vw);
-            font-weight: 500;
+            font-weight: @font-weight-bold;
             margin: 0px;
             width: max-content;
             text-align: center;
