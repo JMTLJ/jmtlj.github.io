@@ -1,13 +1,14 @@
 @color-scheme: dark;
 
-@font-weight-bold: 700;
-@font-weight-medium: 400;
+@font-weight-bold: 600;
+@font-weight-semibold: 500;
+@font-weight-regular: 400;
 @font-weight-light: 300;
 
 @font-face {
     font-family: 'Wotfard';
     font-style: normal;
-    font-weight: 400;
+    font-weight: @font-weight-regular;
     src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-regular-webfont.woff2') format('woff2');
 }
 
@@ -15,6 +16,13 @@
     font-family: 'Wotfard';
     src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
     font-weight: @font-weight-bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-semibold-webfont.woff2') format('woff2');
+    font-weight: @font-weight-semibold;
     font-style: normal;
 }
 
@@ -183,7 +191,7 @@ header {
             .header-enroll-button {
                 position: relative;
                 text-shadow: oklch(0.44 0.2 21.89) 0px 1px 1px;
-                font-weight: 400;
+                font-weight: @font-weight-semibold;
 
                 .header-buy-background {
                     position: absolute;
@@ -253,7 +261,7 @@ section.hero-wrapper {
 
         .hero-heading {
             font-size: min(72px, 8vw);
-            font-weight: @font-weight-bold;
+            font-weight: @font-weight-semibold;
             margin: 0px;
             width: max-content;
             text-align: center;
@@ -321,8 +329,8 @@ section.hero-wrapper {
 
             a {
                 font-weight: 400;
-    color: white;
-    text-decoration: none;
+                color: white;
+                text-decoration: none;
             }
 
             a:hover {
