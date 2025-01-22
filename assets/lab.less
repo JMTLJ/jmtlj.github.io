@@ -4,11 +4,16 @@
 @font-weight-medium: 400;
 @font-weight-light: 300;
 
-@import (inline) url('https://fonts.cdnfonts.com/css/wotfard');
+@font-face {
+    font-family: 'Wotfard';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-regular-webfont.woff2') format('woff2');
+}
 
 @font-face {
     font-family: 'Wotfard';
-    src: url('/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
+    src: local('Wotfard'), url('https://jmtlj.github.io/assets/fonts/wotfard-bold-webfont.woff2') format('woff2');
     font-weight: @font-weight-bold;
     font-style: normal;
 }
