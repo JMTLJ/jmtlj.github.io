@@ -1,254 +1,498 @@
 <html>
-    <head>
-        <link rel="stylesheet/less" type="text/css" href="/assets/lab.less" />
-        <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    </head>
-    <body>
-        <main class="page-wrapper">
-            <!-- Fixed Navbar -->
-            <header class="header-wrapper" style="--transition-duration: 0ms; --top-offset: 0rem;">
-                <div class="max-width-wrapper header-inner-wrapper">
-                    <div class="header-actions">
-                        <a href="https://courses.joshwcomeau.com/" class="header-button header-login-button">
-                            Se connecter
-                        </a>
-        
-                        <div class="spacer-8"></div>
-        
-                        <a class="header-button header-enroll-button">
-                            <span class="header-buy-background"></span>
-                            <span class="header-text">Prendre un ticket</span>
+
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/assets/lab.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+
+<body>
+    <main class="page-wrapper">
+        <!-- Fixed Navbar -->
+        <header class="header-wrapper" style="--transition-duration: 0ms; --top-offset: 0rem;">
+            <div class="max-width-wrapper header-inner-wrapper">
+                <div class="header-actions">
+                    <a href="https://courses.joshwcomeau.com/" class="header-button header-login-button">
+                        Se connecter
+                    </a>
+
+                    <div class="spacer-8"></div>
+
+                    <a class="header-button header-enroll-button">
+                        <span class="header-buy-background"></span>
+                        <span class="header-text">Prendre un ticket</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-wrapper">
+            <div class="hero-gradient"></div>
+
+            <svg width="100%" height="303" viewBox="0 0 1440 303" fill="none" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg" class="hero-swoop"
+                style="display: block; min-width: 600px; overflow: visible;">
+                <path
+                    d="M339 122C220.647 106.212 176.609 -12.2323 58 1.50005C29.0671 4.84984 -14.5 19.0001 -14.5 19.0001V303H1443V184C1443 184 1296.24 217.673 1200.5 221C974.265 228.862 864.366 79.4709 638 81.0001C520.143 81.7962 455.825 137.584 339 122Z"
+                    fill="hsl(274deg, 16%, 8%)">
+                </path>
+            </svg>
+
+            <div class="hero-content">
+                <div class="spacer-24"></div>
+
+                <h1 class="hero-heading">
+                    STOP au <br>mode zombie.
+                </h1>
+
+                <div class="spacer-24"></div>
+
+                <h2 class="hero-subheading">
+                    <span class="hero-desktop-text">
+                        Un programme simple en 30 jours pour reprendre les commandes, renouer avec l'essentiel et
+                        illuminer votre vie.
+                    </span>
+                    <span class="hero-mobile-text">
+                        30 jours pour reprendre les commandes et illuminer votre vie.
+                    </span>
+                </h2>
+
+                <div class="spacer-72"></div>
+
+                <div class="hero-author">
+                    <img src="/assets/harry_pic.jpg" alt="Un homme vraiment beau gosse">
+                    <div class="spacer-16"></div>
+                    <div>
+                        Imaginé par
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.joshwcomeau.com/">
+                            Harry (des méditations)
                         </a>
                     </div>
                 </div>
-            </header>
-        
-            <!-- Hero Section -->
-            <section class="hero-wrapper">
-                <div class="hero-gradient"></div>
-        
-                <svg width="100%" height="303" viewBox="0 0 1440 303" fill="none" preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg" class="hero-swoop"
-                    style="display: block; min-width: 600px; overflow: visible;">
-                    <path
-                        d="M339 122C220.647 106.212 176.609 -12.2323 58 1.50005C29.0671 4.84984 -14.5 19.0001 -14.5 19.0001V303H1443V184C1443 184 1296.24 217.673 1200.5 221C974.265 228.862 864.366 79.4709 638 81.0001C520.143 81.7962 455.825 137.584 339 122Z"
-                        fill="hsl(274deg, 16%, 8%)">
+
+                <div class="spacer-36"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <div class="spacer-64"></div>
+        <div class="pages-content">
+            <section class="max-width-wrapper letter-wrapper">
+                <p class="standout-text">
+                    Tout va trop vite.
+                    <strong class="gold-gradient-text"> Je sais.</strong>
+                </p>
+                <p>
+                    Le mental est en roue libre, les notifications et les distractions vous piègent, capturent votre énergie et vous éloignent de vous-mêmes.
+                </p>
+                <p>
+                    La pression de l’environnement et les attentes du monde exterieur sont puissants. Il y a toujours un nouveau quelque chose d'important à faire, à penser ou à gérer. <em>Vous avez la sensation que c'est sans fin</em>.
+                </p>
+                <p>
+                    Il arrive que vous ayez l’impression d’être devenu <em>une sorte de zombie</em>, un robot impuissant et spectateur de sa propre vie.
+                </p>
+
+                <p>
+                    Malgré les apparences, retrouver les commandes de votre vie est bien plus simple qu’il n’y paraît. Ce qui vous en éloigne, c’est l’illusion constante que tout se joue à l’extérieur, dans la réalité de vos sens.
+                </p>
+
+                <p class="standout-text implicit-standout">
+                    Notre réalité se <em class="sly-em">construit à l'intérieur</em>.
+                </p>
+                <p>
+                    Même en étant conscients de cette vérité, nous n’agissons pas en conséquence : nous passons trop de temps à gérer l’extérieur et pas assez à cultiver l’intérieur. Pourtant, c’est dans nos esprits que se dessine ce qui constitue notre réalité.
+                </p>
+
+                <p>
+                    On empile les solutions de surface : développement personnel, vidéos inspirantes, routines à la mode… Mais tout cela ne fait qu’alourdir la charge mentale. C’est comme ajouter des post-its sur un bureau déjà encombré—on croit s’organiser, mais on ne fait que créer plus de chaos.
+                </p>
+
+                <p>
+                    <span class="text-with-image">
+                        <strong>C'est un cercle vicieux dont il faut sortir au plus vite.</strong>
+                        <img src="assets/long-underline.png" alt="" class="long-underline">
+                    </span>
+                    Parce que cela empoisonne lentement tous les aspects de notre vie.
+                </p>
+
+                <p class="standout-text gold-standout">
+                    <strong>Un changement profond est possible.</strong>
+                </p>
+
+                <p>
+                    On croit souvent que seuls quelques élus savent naviguer dans le chaos du monde tout en gardant le contrôle sur leur réalité intérieure. Mais c’est faux. Si vous apprenez les bases et comprenez les règles du jeu, vous saurez le faire aussi !
+                </p>
+
+                <p>
+                    Lorsque l'on réussit à canaliser son mental,
+                    <span class="text-with-image">
+                        <em>tout change</em>
+                        <img alt="" src="/assets/double-underline.png" class="double-underline">
+                    </span>.
+                    L'anxiété et la chaos perdent du terrain. On se sent beaucoup plus léger, plus ancré. La vie devient un jeu et vous contrôlez la partie.
+                </p>
+
+                <p>
+                    <strong>
+                        Mais comment réussir ? 
+                    </strong>
+                    Eh bien, vous pourriez passer des années à tester des techniques de méditation, à lire des dizaines de livres sur le bien-être et la pleine conscience, puis à essayer de bricoler une pratique qui fonctionne. C’est ce que j’ai fait. Ça a marché. Mais j'ai arrêté de compter les essais, les erreurs et le temps investi.
+                </p>
+                
+                <p style="position: relative;">
+                    <img alt="" src="/assets/stubby-arrow.png" class="stubby-arrow">
+                    <strong class="highlighted-text">Je veux vous éviter ce parcours du combattant.</strong>
+                    C’est la raison pour laquelle j’ai condensé mes connaissances et mon éxpérience dans un programme simple et structuré à suivre sur 30 jours.
+                </p>
+                
+                <p>
+                    Je l’ai appelé...
+                </p>
+                
+           
+            </section>
+
+            <section class="title-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2986 393" class="background-swoop">
+                    <path fill="hsl(267deg 50% 11%)"
+                        d="M573.5 94C346.756 91.146.5 0 .5 0v393h2985V222s-334.14-75.852-530.5-94c-222.28-20.544-346.81 47.19-570 43-327.93-6.157-501.55-136.097-829.5-131.5-189.414 2.655-292.583 56.884-482 54.5z">
                     </path>
                 </svg>
-        
-                <div class="hero-content">
-                    <div class="spacer-24"></div>
-        
-                    <h1 class="hero-heading">
-                        Stop au pilote <br>automatique.
-                    </h1>
-        
-                    <div class="spacer-24"></div>
-        
-                    <h2 class="hero-subheading">
-                        <span class="hero-desktop-text">
-                            Un programme simple en 30 jours pour reprendre les commandes, renouer avec l'essentiel et illuminer votre vie.
-                        </span>
-                        <span class="hero-mobile-text">
-                            30 jours pour reprendre les commandes et illuminer votre vie.
-                        </span>
-                    </h2>
-        
-                    <div class="spacer-72"></div>
-        
-                    <div class="hero-author">
-                        <img src="/assets/harry_pic.jpg" alt="Un homme vraiment beau gosse">
-                        <div class="spacer-16"></div>
-                        <div>
-                            Imaginé par
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.joshwcomeau.com/">
-                                Harry E. Gueguen
-                            </a>
-                        </div>
-                    </div>
-        
-                    <div class="spacer-36"></div>
-                </div>
-            </section>
-        
-            <!-- Introduction Section -->
-            <div class="spacer-64"></div>
-            <div class="pages-content">
-                <section class="max-width-wrapper letter-wrapper">
-                    <p class="standout-text">
-                        Un changement profond est possible,
-                        <strong class="gold-gradient-text">promis !</strong>
-                    </p>
-                    <p>
-                        Pour beaucoup d'entre nous, trouver du calme, de la paix et de la clarté dans le monde moderne est devenu un vrai challenge.
-                    </p>
-                    <p>
-                        Oui c'est vrai, il y a la méditation occasionnelle qui permet à certains d'avoir un peu de répit. Mais il suffit de rouvrir les yeux pour être à nouveau submergé(e) : les urgences, les notifications, les attentes des autres et du monde. Ça n'en finit tout simplement jamais.
-                    </p>
-                    <p>
-                        Cette spirale continue nous éloigne de notre équilibre intérieur, ce point d’ancrage qui devrait être notre priorité de chaque instant.
-                        <em>Et puis, combien de personnes se sentent perdues aujourd'hui ?</em>
-                    </p>
-                    <p>
-                        Et pourtant, la vraie sérénité, celle dont les bienfaits sont inestimables, est accessible. Le sentiment d’être submergé est souvent la conséquence de mécanismes invisibles devenus des habitudes, de schémas inconscients qu'il suffit d'éclairer pour commencer à les changer.
-                    </p>
-                    <p class="standout-text implicit-standout">
-                        Ce qui vous contrôle <em class="sly-em">reste caché</em>.
-                    </p>
-                    <p>
-                        Quand il s'agit de retrouver la sérénité, beaucoup se tournent vers la méditation, des livres de developpement personnel ou des routines populaires trouvées sur instagram. Mais c'est comme coller des pansements sur un os cassé : ça ne règle rien.
-                    </p>
-                    <p>
-                        Pourquoi ? Parce que ces tentatives ne touchent pas aux véritables causes du problème : les mécanismes profonds qui influencent vos pensées, vos émotions et vos comportements. Vous pouvez accumuler des “outils” pendant des années sans jamais comprendre pourquoi vous restez bloqué(e) dans les mêmes schémas.
-                    </p>
-                    <p>
-                        <span class="text-with-image">
-                            <strong>Ça ne fonctionne pas.</strong>
-                            <img alt="" src="/assets/long-underline.png" class="long-underline">
-                        </span>
-                        Il est temps de dépasser le superficiel et de vous attaquer aux fondations de votre équilibre intérieur.
-                    </p>
-                    <p class="standout-text gold-standout">
-                        <strong>Vivre joyeux peut s'apprendre.</strong>
-                    </p>
-                    <p>
-                        Beaucoup pensent que retrouver la sérénité et la clarté est une question de prédisposition, ou que certaines personnes “ont ça en elles” naturellement. Mais ce n’est pas vrai.
-                    </p>
-                    <p>
-                        Comme tout dans la vie, la paix intérieure
-                        <span class="text-with-image">
-                            <em>ça s'apprend</em>
-                            <img alt="" src="/assets/double-underline.png" class="double-underline">
-                        </span>
-                        . Et comme toute compétence, elle demande de comprendre quelques bases. Ce qui semblait pesant et insurmontable peut devenir léger et facile, et votre vie peut prendre de nouvelles couleurs.
-                    </p>
-                    <p style="position: relative;">
-                        <img alt="" src="/assets/stubby-arrow.png" class="stubby-arrow">
-                        <strong class="highlighted-text">J'ai créé un parcours guidé sur 30 jours</strong>
-                        pour vous aider à (re)découvrir ces bases et à les appliquer dans votre quotidien. Tout ne changera pas du jour au lendemain, mais je peux vous promettre que vous apprendrez à gérer vos émotions et à canaliser votre énergie vers ce qui compte vraiment pour vous.
-                    </p>
-                    <p>Ce parcours, je l'ai appelé…</p>
-                </section>
-        
-                <section class="title-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2986 393" class="background-swoop">
-                        <path fill="hsl(267deg 50% 11%)" d="M573.5 94C346.756 91.146.5 0 .5 0v393h2985V222s-334.14-75.852-530.5-94c-222.28-20.544-346.81 47.19-570 43-327.93-6.157-501.55-136.097-829.5-131.5-189.414 2.655-292.583 56.884-482 54.5z"></path>
-                    </svg>
-                  
-                    <div class="content-wrapper">
-                        <div class="spotlight left-spotlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70vw" fill="none" viewBox="0 0 2441 2224" class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK" style="transform: rotateY(180deg);"><g filter="url(#spotlight-left0_f)"><path fill="url(#spotlight-left0_linear)" fill-opacity="0.5" d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><g filter="url(#spotlight-left1_f)"><path fill="url(#spotlight-left1_linear)" d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z"></path></g><g filter="url(#spotlight-left2_f)"><path fill="url(#spotlight-left2_linear)" fill-opacity="0.2" d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z"></path></g><g filter="url(#spotlight-left3_f)"><path fill="url(#spotlight-left3_linear)" d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><defs><filter id="spotlight-left0_f" width="1641.84" height="1429" x="400.786" y="400.897" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur></filter><filter id="spotlight-left1_f" width="2439.71" height="2222.09" x="0.786" y="0.924" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur></filter><filter id="spotlight-left2_f" width="1735.7" height="1638.64" x="418.941" y="333.769" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur></filter><filter id="spotlight-left3_f" width="1574.8" height="1357.97" x="425.787" y="426.121" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5"></feGaussianBlur></filter><linearGradient id="spotlight-left0_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left1_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left2_linear" x1="921.666" x2="1972.19" y1="753.837" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-left3_linear" x1="1422" x2="1971.74" y1="1225" y2="1745.89" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop><stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient></defs>
-                            </svg>
-                        </div>
-                    
-                        <div class="spotlight right-spotlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60vw" fill="none" viewBox="0 0 2441 2224" class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK"><g filter="url(#spotlight-right0_f)"><path fill="url(#spotlight-right0_linear)" fill-opacity="0.5" d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><g filter="url(#spotlight-right1_f)"><path fill="url(#spotlight-right1_linear)" d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z"></path></g><g filter="url(#spotlight-right2_f)"><path fill="url(#spotlight-right2_linear)" fill-opacity="0.2" d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z"></path></g><g filter="url(#spotlight-right3_f)"><path fill="url(#spotlight-right3_linear)" d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z"></path></g><defs><filter id="spotlight-right0_f" width="1641.84" height="1429" x="400.786" y="400.897" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur></filter><filter id="spotlight-right1_f" width="2439.71" height="2222.09" x="0.786" y="0.924" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur></filter><filter id="spotlight-right2_f" width="1735.7" height="1638.64" x="418.941" y="333.769" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur></filter><filter id="spotlight-right3_f" width="1574.8" height="1357.97" x="425.787" y="426.121" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5"></feGaussianBlur></filter><linearGradient id="spotlight-right0_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right1_linear" x1="921.665" x2="1972.19" y1="753.838" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right2_linear" x1="921.666" x2="1972.19" y1="753.837" y2="1745.42" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient><linearGradient id="spotlight-right3_linear" x1="1422" x2="1971.74" y1="1225" y2="1745.89" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity="0"></stop><stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop><stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop><stop offset="1" stop-color="#fff"></stop></linearGradient></defs>
-                            </svg>
-                        </div>
+
+                <div class="content-wrapper">
+                    <div class="spotlight left-spotlight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70vw" fill="none" viewBox="0 0 2441 2224"
+                            class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK" style="transform: rotateY(180deg);">
+                            <g filter="url(#spotlight-left0_f)">
+                                <path fill="url(#spotlight-left0_linear)" fill-opacity="0.5"
+                                    d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-left1_f)">
+                                <path fill="url(#spotlight-left1_linear)"
+                                    d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-left2_f)">
+                                <path fill="url(#spotlight-left2_linear)" fill-opacity="0.2"
+                                    d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-left3_f)">
+                                <path fill="url(#spotlight-left3_linear)"
+                                    d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z">
+                                </path>
+                            </g>
+                            <defs>
+                                <filter id="spotlight-left0_f" width="1641.84" height="1429" x="400.786" y="400.897"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-left1_f" width="2439.71" height="2222.09" x="0.786" y="0.924"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-left2_f" width="1735.7" height="1638.64" x="418.941" y="333.769"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-left3_f" width="1574.8" height="1357.97" x="425.787" y="426.121"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5">
+                                    </feGaussianBlur>
+                                </filter>
+                                <linearGradient id="spotlight-left0_linear" x1="921.665" x2="1972.19" y1="753.838"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-left1_linear" x1="921.665" x2="1972.19" y1="753.838"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-left2_linear" x1="921.666" x2="1972.19" y1="753.837"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-left3_linear" x1="1422" x2="1971.74" y1="1225"
+                                    y2="1745.89" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop>
+                                    <stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
 
-                    <div class="van">
-                        <div class="van-body">
-                          <div class="window-layer">
+                    <div class="spotlight right-spotlight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60vw" fill="none" viewBox="0 0 2441 2224"
+                            class="Spotlight__Svg-sc-1kd6jfz-1 bFEQmK">
+                            <g filter="url(#spotlight-right0_f)">
+                                <path fill="url(#spotlight-right0_linear)" fill-opacity="0.5"
+                                    d="M1133.48 511.488l792.11 1178.782 16.91 11.14-11 9.59-5.91-9.59L506.336 935.49l174.152-325.932 452.992-98.07z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-right1_f)">
+                                <path fill="url(#spotlight-right1_linear)"
+                                    d="M1133.48 511.488l792.11 1178.782 14.91 13.73h-7L506.336 935.49l174.151-325.932 452.993-98.07z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-right2_f)">
+                                <path fill="url(#spotlight-right2_linear)" fill-opacity="0.2"
+                                    d="M1621.5 538l304.09 1152.27 28.91 54.23-53.5 11L629.5 1342l50.99-732.441L1621.5 538z">
+                                </path>
+                            </g>
+                            <g filter="url(#spotlight-right3_f)">
+                                <path fill="url(#spotlight-right3_linear)"
+                                    d="M1133.48 511.488l792.11 1178.782L506.336 935.49l174.152-325.932 452.992-98.07z">
+                                </path>
+                            </g>
+                            <defs>
+                                <filter id="spotlight-right0_f" width="1641.84" height="1429" x="400.786" y="400.897"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="50"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-right1_f" width="2439.71" height="2222.09" x="0.786" y="0.924"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="250"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-right2_f" width="1735.7" height="1638.64" x="418.941" y="333.769"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="100"></feGaussianBlur>
+                                </filter>
+                                <filter id="spotlight-right3_f" width="1574.8" height="1357.97" x="425.787" y="426.121"
+                                    color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                    <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="37.5">
+                                    </feGaussianBlur>
+                                </filter>
+                                <linearGradient id="spotlight-right0_linear" x1="921.665" x2="1972.19" y1="753.838"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-right1_linear" x1="921.665" x2="1972.19" y1="753.838"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-right2_linear" x1="921.666" x2="1972.19" y1="753.837"
+                                    y2="1745.42" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                                <linearGradient id="spotlight-right3_linear" x1="1422" x2="1971.74" y1="1225"
+                                    y2="1745.89" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fff" stop-opacity="0"></stop>
+                                    <stop offset="0.318" stop-color="#fff" stop-opacity="0.18"></stop>
+                                    <stop offset="0.609" stop-color="#fff" stop-opacity="0.36"></stop>
+                                    <stop offset="1" stop-color="#fff"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="van">
+                    <div class="van-body">
+                        <div class="window-layer">
                             <div class="window"></div>
                             <div class="window"></div>
                             <div class="window"></div>
                             <div class="window">
                             </div>
-                          </div>
-                          <div class="canopy"></div>
-                          <div class="roofrack">
+                        </div>
+                        <div class="canopy"></div>
+                        <div class="roofrack">
                             <div class="support"></div>
                             <div class="support"></div>
                             <div class="board"></div>
-                          </div>
-                          <div class="tailpipe">
-                            <div class="smoke"></div>
-                            <div class="smoke"></div>
-                            <div class="smoke"></div>
-                          </div>
-                          <div class="rear"></div>
-                          <div class="front"></div>
                         </div>
-                        <div class="wheels">
-                          <div class="wheel"></div>
-                          <div class="wheel"></div>
+                        <div class="tailpipe">
+                            <div class="smoke"></div>
+                            <div class="smoke"></div>
+                            <div class="smoke"></div>
                         </div>
+                        <div class="rear"></div>
+                        <div class="front"></div>
                     </div>
-                  
-                      <!-- Foreground Swoop -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2839 579" class="foreground-swoop"><g clip-path="url(#clip0)"><path fill="hsl(274deg 16% 8%)" d="M2095 482c344.77-31.423 744-482 744-482v578.5H-127s0-214 331-256C392.489 298.583 452.227 451.156 625.5 482c332.323 59.155 508.95-108.5 846.5-108.5 237.5 0 374.02 131.192 623 108.5z"></path></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0H2839V579H0z"></path></clipPath></defs>
-                    </svg>
+                    <div class="wheels">
+                        <div class="wheel"></div>
+                        <div class="wheel"></div>
+                    </div>
+                </div>
 
-                    <!-- Title Content -->
-                    <div class="title-content">
-                        <div class="heading-wrapper">
-                            <h1 class="title-heading">
-                                <span class="line-one">le bus</span>
-                                <span class="line-two"><span class="thin">de</span> harry</span>
-                                <span class="line-three"></span>
-                            </h1>
-                        </div>
-                    </div>  
-                </section>
-            </div>
+                <!-- Foreground Swoop -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2839 579" class="foreground-swoop">
+                    <g clip-path="url(#clip0)">
+                        <path fill="hsl(274deg 16% 8%)"
+                            d="M2095 482c344.77-31.423 744-482 744-482v578.5H-127s0-214 331-256C392.489 298.583 452.227 451.156 625.5 482c332.323 59.155 508.95-108.5 846.5-108.5 237.5 0 374.02 131.192 623 108.5z">
+                        </path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <path fill="#fff" d="M0 0H2839V579H0z"></path>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <!-- Title Content -->
+                <div class="title-content">
+                    <div class="heading-wrapper">
+                        <h1 class="title-heading">
+                            <span class="line-one">le bus</span>
+
+                            <span class="line-two" style="-webkit-text-fill-color: #f2e5c9; margin-top: 1rem; font-size: min(5vw, 37px);">tout simplement !</span>
+                            <span class="line-three"><span class="thin"></span></span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="spacer-64"></div>
+        <div class="testimonials-wrapper">
+            <h2 class="testimonials-title">Ils me font confiance</h2>
+            <script src="https://widget.senja.io/widget/21637404-6c30-49ac-9121-5869f7d8f1bb/platform.js"
+                type="text/javascript" async></script>
+            <div class="senja-embed" data-id="21637404-6c30-49ac-9121-5869f7d8f1bb" data-mode="shadow"
+                data-lazyload="false" style="display: block;"></div>
+            <div class="spacer-64"></div>
             
-            <!-- Testimonials Section -->
-            <div class="spacer-128"></div>
-            <div class="testimonials-wrapper">
-                <h2 class="testimonials-title">Ils me font confiance</h2>
-                <script src="https://widget.senja.io/widget/21637404-6c30-49ac-9121-5869f7d8f1bb/platform.js" type="text/javascript" async></script>
-                <div class="senja-embed" data-id="21637404-6c30-49ac-9121-5869f7d8f1bb" data-mode="shadow" data-lazyload="false" style="display: block;"></div>
+        </div>
+
+        <div class="curve-wrapper">
+            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 73"
+                class="TestimonialWrappercurves__Svg-sc-ywmt7o-0 fUfQTM"
+                style="--transform: translateY(-2px) scale(1.1);">
+                <path
+                    d="M133 39.5C80.795 39.858 0 26 0 26V0h440.5v51.5S427.546 62.233 418 67c-49.342 24.641-78.218-41.116-133-47.5-59.469-6.93-92.13 19.589-152 20z">
+                </path>
+            </svg>
+        </div>
+
+        <!-- About me section -->
+        <section class="about-me-wrapper">
+            <header class="about-me-header">
+                <div class="about-me-photo">
+                    <img alt="" src="/assets/jmtlj.jpg"
+                        class="about-me-photo-copy">
+                        
+                    <img src="/assets/jmtlj.jpg"
+                        alt="The devilishly-handsome author of this course, sitting and smiling."
+                        class="about-me-photo-original ">
+                    <div class="about-me-photo-gradient"></div>
+                </div>
+                <h2 class="about-me-title">Harry, enchanté !</h2>
+            </header>
+            <div class="about-me-content">
+
+                <p>
+                    Believe it or not, the very first non-trivial web application I built was an online education
+                    platform! My friend worked as a tutor, and he wanted a way to assign math problems to his
+                    students. I built it with PHP, MySQL, and jQuery. It was a dog's breakfast, but it worked.
+                </p>
+
+                <p>
+                    I abandoned that project when I discovered Khan Academy, a world-renowned non-profit on a
+                    mission to provide a free, world-class education online. Years later, I would join as a
+                    software engineer, to help build that platform! I got to work alongside some of the smartest
+                    pedagogical minds in the world, and I learned a whole lot about how to create effective
+                    educational content.
+                </p>
+
+                <p>
+                    I've spent the last couple years working in senior engineering roles at organizations like
+                    DigitalOcean and Gatsby Inc. (acq. Netlify) , building tools to help developers get their
+                    ideas off the ground.
+                </p>
+
+                <p>
+                    For the past few years, I've also taught part-time for Journey Education, developing
+                    curriculum and leading web-development courses at Concordia University.
+                </p>
+
+                <p>
+                    It's been almost a decade since I built my first educational platform. I've learned a lot
+                    about education since then, and it's high time I do something with that knowledge and
+                    experience.
+                </p>
+
+                <p>
+                    CSS for JavaScript Developers is the culmination of my career, and I genuinely believe it'll
+                    be profoundly useful. I'm so excited to help you on your journey with CSS!
+                </p>
             </div>
-          
-        
-            <!-- @todo à combler avec toutes les conneries ici -->
-        
-            <!-- Footer -->
-            <div class="spacer"></div>
-        
-            <footer role="contentinfo" class="footer-wrapper">
-                <div class="max-width-wrapper footer-inner-wrapper">
-                    <!-- Left Section -->
-                    <div class="footer-left">
-                        <div class="footer-top">
-                            <a href="/" class="logo-wrapper">
-                                <span class="logo-first">Harry E. Gueguen</span>
-                            </a>
-                        </div>
-                        <span class="footer-desktop-only">
-                            <div class="footer-copyright">
-                                © 2020-present Harry E. Gueguen. Tous droits réservés.
-                            </div>
-                        </span>
+        </section>
+
+
+        <!-- @todo à combler avec toutes les conneries ici -->
+
+        <!-- Footer -->
+        <div class="spacer"></div>
+
+        <footer role="contentinfo" class="footer-wrapper">
+            <div class="max-width-wrapper footer-inner-wrapper">
+                <!-- Left Section -->
+                <div class="footer-left">
+                    <div class="footer-top">
+                        <a href="/" class="logo-wrapper">
+                            <span class="logo-first">Harry E. Gueguen</span>
+                        </a>
                     </div>
-        
-                    <!-- Right Section -->
-                    <div class="footer-right">
-                        <div class="footer-column">
-                            <h3 class="footer-heading">Liens</h3>
-                            <div class="footer-links">
-                                <a href="https://courses.joshwcomeau.com/terms" target="_blank" rel="noopener noreferrer"
-                                    class="footer-link">Conditions d'utilisation</a>
-                                <a href="https://courses.joshwcomeau.com/privacy" target="_blank" rel="noopener noreferrer"
-                                    class="footer-link">Politique de confidentialité</a>
-                                <a href="https://www.joshwcomeau.com/contact/" target="_blank" rel="noopener noreferrer"
-                                    class="footer-link">Mes réseaux sociaux</a>
-                                <a href="https://bsky.app/profile/joshwcomeau.com" target="_blank" rel="noopener noreferrer"
-                                    class="footer-link">Le Podcast</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Mobile Only -->
-                    <span class="footer-mobile-only">
-                        <div class="footer-mobile-copyright">
+                    <span class="footer-desktop-only">
+                        <div class="footer-copyright">
                             © 2020-present Harry E. Gueguen. Tous droits réservés.
                         </div>
                     </span>
                 </div>
-            </footer>
-        </main>
-        
-    </body>
+
+                <!-- Right Section -->
+                <div class="footer-right">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Liens</h3>
+                        <div class="footer-links">
+                            <a href="https://courses.joshwcomeau.com/terms" target="_blank" rel="noopener noreferrer"
+                                class="footer-link">Conditions d'utilisation</a>
+                            <a href="https://courses.joshwcomeau.com/privacy" target="_blank" rel="noopener noreferrer"
+                                class="footer-link">Politique de confidentialité</a>
+                            <a href="https://www.joshwcomeau.com/contact/" target="_blank" rel="noopener noreferrer"
+                                class="footer-link">Mes réseaux sociaux</a>
+                            <a href="https://bsky.app/profile/joshwcomeau.com" target="_blank" rel="noopener noreferrer"
+                                class="footer-link">Le Podcast</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Only -->
+                <span class="footer-mobile-only">
+                    <div class="footer-mobile-copyright">
+                        © 2020-present Harry E. Gueguen. Tous droits réservés.
+                    </div>
+                </span>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
 </html>

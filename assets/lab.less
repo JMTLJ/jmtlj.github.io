@@ -1061,3 +1061,81 @@ footer {
         margin-bottom: 32px;
     }
 }
+
+.curve-wrapper {
+    margin-bottom: -40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.004) 8.1%, rgba(255, 255, 255, 0.008) 15.5%, rgba(255, 255, 255, 0.016) 22.5%, rgba(255, 255, 255, 0.027) 29%, rgba(255, 255, 255, 0.04) 35.3%, rgba(255, 255, 255, 0.055) 41.2%, rgba(255, 255, 255, 0.067) 47.1%, rgba(255, 255, 255, 0.082) 52.9%, rgba(255, 255, 255, 0.098) 58.8%, rgba(255, 255, 255, 0.11) 64.7%, rgba(255, 255, 255, 0.125) 71%, rgba(255, 255, 255, 0.133) 77.5%, rgba(255, 255, 255, 0.14) 84.5%, rgba(255, 255, 255, 0.15) 91.9%, rgba(255, 255, 255, 0.15) 100%);
+    transform: translateY(-1px);
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    overflow: hidden;
+
+    svg {
+        display: block;
+        width: 100%;
+        min-width: 700px;
+        height: 80px;
+        transform: var(--transform);
+
+        path {
+            fill: @color-background;
+        }
+    }
+}
+
+.about-me-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    header.about-me-header {
+        position: relative;
+
+        .about-me-photo {
+
+            img {
+                isolation: isolate;
+                transform: translateX(-96px);
+                position: relative;
+                width: 500px;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 50%;
+                filter: drop-shadow(rgb(21, 17, 24) 0px 0px 20px);
+            }
+
+            .about-me-photo-copy {
+                position: absolute;
+                filter: blur(150px);
+                opacity: 0.6;
+                transform: translateX(25%);
+            }
+        }
+
+        .about-me-title {
+            font-size: min(96px, 15vw);
+            opacity: 1;
+            position: absolute;
+            bottom: 16px;
+            left: -5px;
+            text-shadow: rgba(21, 17, 24, 0.5) 0px 0px 30px, rgba(21, 17, 24, 0.5) 0px 5px 15px, rgba(21, 17, 24, 0.5) 0px 1px 2px;
+        }
+    }
+
+    div.about-me-content {
+        padding-top: 72px;
+        max-width: 65ch;
+        margin: 0px auto;
+
+        p {
+            font-size: 21px;
+            margin-bottom: 1.65em;
+            line-height: 1.45;
+        }
+    }
+}
