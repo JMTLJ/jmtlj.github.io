@@ -25,17 +25,6 @@
             </div>
         </header>
 
-        <svg width="300" height="150">
-            <defs>
-                <path id="arc" d="M 20,100 A 130,130 0 0,1 280,100" />
-            </defs>
-            <text fill="black" font-size="24" font-family="Arial">
-                <textPath href="#arc" startOffset="50%" text-anchor="middle">
-                    Ton texte bombé ici
-                </textPath>
-            </text>
-        </svg>
-
         <!-- Hero Section -->
         <section class="hero-wrapper">
             <div class="hero-gradient"></div>
@@ -969,8 +958,10 @@
 
 <script>
     const van = document.querySelector(".van");
-    const path = document.querySelector(".background-swoop path"); // Sélectionne le chemin du SVG
     const zone = document.querySelector(".title-wrapper");
+
+    // Définir une position de départ différente selon la taille de l'écran
+    let initialLeft = window.innerWidth < 650 ? 0 : 120; // Changer la valeur de départ
 
     const trackerVan = new IntersectionObserver(
         ([entry]) => {
@@ -987,12 +978,15 @@
 
     function updateBusParallax() {
         const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Ratio du scroll
-        const pathLength = path.getTotalLength(); // Longueur totale du chemin
-        const point = path.getPointAtLength(scrollPercent * pathLength); // Récupère les coordonnées du chemin
+        const horizontalMove = scrollPercent * 300; // Ajuste la vitesse horizontale
+        const verticalLift = Math.pow(scrollPercent, 2) * 2000; // Quadratique pour effet d’envol
 
-        // Applique la nouvelle position (ajustements possibles)
-        van.style.left = `${point.x - 200}px`;
-        van.style.bottom = `${point.y - 250}px`; // Ajuste ici si besoin
+        // Vérifier à chaque scroll si la largeur d'écran a changé
+        let currentLeftOffset = window.innerWidth < 650 ? 0 : 120;
+
+        // Applique la nouvelle position
+        van.style.left = `${horizontalMove}vw`; 
+        van.style.bottom = `${verticalLift + currentLeftOffset}px`; // Le bus monte avec une position différente selon l'écran
     }
 </script>
 
