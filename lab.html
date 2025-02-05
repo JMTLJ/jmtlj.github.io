@@ -25,6 +25,17 @@
             </div>
         </header>
 
+        <svg width="300" height="150">
+            <defs>
+                <path id="arc" d="M 20,100 A 130,130 0 0,1 280,100" />
+            </defs>
+            <text fill="black" font-size="24" font-family="Arial">
+                <textPath href="#arc" startOffset="50%" text-anchor="middle">
+                    Ton texte bombé ici
+                </textPath>
+            </text>
+        </svg>
+
         <!-- Hero Section -->
         <section class="hero-wrapper">
             <div class="hero-gradient"></div>
@@ -957,14 +968,42 @@
 </script>
 
 <script>
+    const van = document.querySelector(".van");
+    const path = document.querySelector(".background-swoop path"); // Sélectionne le chemin du SVG
+    const zone = document.querySelector(".title-wrapper");
+
+    const trackerVan = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                window.addEventListener("scroll", updateBusParallax);
+            } else {
+                window.removeEventListener("scroll", updateBusParallax);
+            }
+        },
+        { threshold: 0.1 } // Déclenche quand 10% de l’élément est visible
+    );
+
+    trackerVan.observe(zone);
+
+    function updateBusParallax() {
+        const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Ratio du scroll
+        const pathLength = path.getTotalLength(); // Longueur totale du chemin
+        const point = path.getPointAtLength(scrollPercent * pathLength); // Récupère les coordonnées du chemin
+
+        // Applique la nouvelle position (ajustements possibles)
+        van.style.left = `${point.x - 200}px`;
+        van.style.bottom = `${point.y - 250}px`; // Ajuste ici si besoin
+    }
+</script>
+
+
+<script>
     (function () {
         const second = 1000,
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
 
-        //I'm adding this section so I don't have to keep updating this pen every year :-)
-        //remove this if you don't need it
         let today = new Date(),
             dd = String(today.getDate()).padStart(2, "0"),
             mm = String(today.getMonth() + 1).padStart(2, "0"),
