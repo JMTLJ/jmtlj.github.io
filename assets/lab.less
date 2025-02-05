@@ -1791,6 +1791,18 @@ footer {
                                 }
                             }
 
+                            .old-price {
+                                font-size: 2.5rem;
+                                text-decoration: line-through;
+                                margin-right: 8px;
+
+                                span.euros {
+                                    font-size: 0.65em;
+                                    transform: translateY(-30%);
+                                    display: inline-block;
+                                }
+                            }
+
                         }
 
                         .buy-wrapper {
@@ -1811,8 +1823,13 @@ footer {
                                 background: rgb(46, 49, 56);
                                 color: white;
                                 font-size: 19px;
-                                font-weight: 400;
+                                font-weight: 500;
                                 border-radius: 6px;
+
+                                &.disabled {
+                                    background-color: #cecece;
+                                    cursor: not-allowed;
+                                }
                             }
 
                             a.buy-button-wrapper {
@@ -1820,6 +1837,12 @@ footer {
                                 position: relative;
                                 text-decoration: none;
                                 transition: filter 600ms;
+
+                                &:hover {
+                                    transition: filter 250ms;
+                                    filter: brightness(110%);
+                                    text-decoration: none;
+                                }
 
                                 .buy-button__shadow {
                                     position: absolute;
@@ -1832,6 +1855,11 @@ footer {
                                     transform: translateY(4px);
                                     transition: 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
                                     will-change: transform;
+
+                                    &:hover {
+                                        transform: translateY(6px);
+                                        transition: 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+                                    }
                                 }
 
                                 .buy-button__backdrop {
@@ -1852,7 +1880,7 @@ footer {
                                     background: oklch(0.6 0.3 20.33);
                                     color: white;
                                     font-size: 21px;
-                                    font-weight: 500;
+                                    font-weight: 600;
                                     text-shadow: oklch(0.44 0.2 21.89) 0px 1px 1px;
                                     display: flex;
                                     -webkit-box-pack: center;
@@ -1862,6 +1890,11 @@ footer {
                                     transform: translateY(-4px);
                                     will-change: transform;
                                     transition: 600ms cubic-bezier(0, 0.56, 0.53, 1.5);
+
+                                    &:hover {
+                                        transform: translateY(-8px);
+                                        transition: 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+                                    }
                                 }
                             }
 
