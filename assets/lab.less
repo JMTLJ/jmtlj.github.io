@@ -216,6 +216,10 @@ strong {
     font-weight: @font-weight-semibold;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
@@ -1650,6 +1654,20 @@ footer {
     section.purchase-section {
         position: relative;
 
+        .purchase-section-backdrop {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 350px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            opacity: 0.5;
+            background: linear-gradient(rgba(107, 87, 46, 0), rgba(122, 92, 31, 0.95));
+        }
+
         .horizontal-heading-line {
             position: absolute;
             left: 0px;
@@ -1700,6 +1718,94 @@ footer {
             }
         }
 
+        .countdown-wrapper {
+            display: flex;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            gap: 64px;
+            margin-top: 4rem;
+
+            .countdown-block {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                max-width: 36rem;
+
+            }
+
+            .countdown-content {
+                flex: 1 1 0%;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                
+
+                h3 {
+                    font-size: 2rem;
+                    margin-bottom: 16px;
+                    text-align: center;
+                }
+
+                .container-countdown {
+                    border: 4px dashed rgb(255 165 29);
+                    border-radius: 3rem;
+                    text-align: center;
+                    padding: 0em 1em 1em 1em;
+
+
+
+                    h1 {
+                        font-weight: normal;
+                        letter-spacing: .125rem;
+                        text-transform: uppercase;
+                      }
+                      
+                      li {
+                        display: inline-block;
+                        font-size: 1em;
+                        list-style-type: none;
+                        padding: 1em;
+                        text-transform: uppercase;
+                      }
+                      
+                      li span {
+                        display: block;
+                        font-size: 3rem;
+                        font-weight: 600;
+                      }
+                      
+                      .emoji {
+                        display: none;
+                        padding: 1rem;
+                      }
+                      
+                      .emoji span {
+                        font-size: 4rem;
+                        padding: 0 .5rem;
+                      }
+
+                      @media all and (max-width: 768px) {
+                        h1 {
+                          font-size: calc(1.5rem * 0.75);
+                        }
+                        
+                        li {
+                          font-size: calc(1.125rem * 0.75);
+                        }
+                        
+                        li span {
+                          font-size: calc(3.375rem * 0.75);
+                        }
+                      }
+                }
+
+                h3 {
+                    
+                }
+            }
+        }
+
         .cards-wrapper {
             position: relative;
 
@@ -1713,7 +1819,7 @@ footer {
                 justify-content: center;
                 align-items: flex-start;
                 gap: 32px;
-                padding: 140px 16px 0px;
+                padding: 110px 16px 0px;
                 max-width: 1200px;
                 margin: 0px auto;
                 scroll-margin-top: 100px;
@@ -2013,6 +2119,86 @@ footer {
                         width: 167px;
                         filter: saturate(0.7);
                     }
+                }
+            }
+        }
+    }
+}
+
+
+
+section.faq-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    .faq-header {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        
+        .faq-dot-line {
+            display: block;
+            overflow: visible;
+            width: 100px;
+            justify-self: center;
+        
+            path {
+                stroke: @color-gray-700;
+                stroke-width: 4px;
+                stroke-dasharray: 10px, 16px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                vector-effect: non-scaling-stroke;
+                backface-visibility: hidden;
+            }
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: 500;
+            margin-top: 8px;
+            margin-bottom: 72px;
+            text-align: center;
+        }
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 32px;
+        padding: 0px 32px;
+
+        details.question-wrapper {
+            scroll-margin-top: 150px;
+
+            summary.question {
+                cursor: pointer;
+                font-size: 19px;
+                font-weight: 400;
+                outline-offset: 8px;
+                margin-bottom: 16px;  
+            }
+            .answer-wrapper {
+                animation: 600ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 normal none running open-question;
+
+                @keyframes open-question {
+                    0% {
+                        transform: translateY(-10px);
+                    }
+                    
+                    100% {
+                        transform: translateY(0px);
+                    }
+                }
+                p {
+                    margin-bottom: 1.65em;
+                    line-height: 1.45;
                 }
             }
         }

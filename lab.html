@@ -17,7 +17,7 @@
 
                     <div class="spacer-8"></div>
 
-                    <a class="header-button header-enroll-button">
+                    <a class="header-button header-enroll-button" href="#purchase-anchor">
                         <span class="header-buy-background"></span>
                         <span class="header-text">Prendre un ticket</span>
                     </a>
@@ -521,7 +521,7 @@
                             <img src="/assets/illustrations/bubble.png" alt="" class="illustration_layer_image">
                         </picture>
                     </div>
-                    
+
                 </div>
 
                 <p class="standout-text bigger" style="text-align: center;">
@@ -587,19 +587,52 @@
                 </path>
             </svg>
         </div>
+        <a href="#" id="purchase-anchor"></a>
 
         <div class="spacer-128"></div>
-        <a href="#" id="purchase-anchor"></a>
         <div class="purchase-wrapper">
             <section class="purchase-section">
+                <div class="purchase-section-backdrop">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="none" viewBox="0 0 4245 782" class="TripleHills__Svg-sc-ucr1ua-0 heXTbK">
+                        <path fill="hsl(34deg 16% 6% / 0.375)" d="M969.169 143.762C576.431 160.705 0 283.153 0 283.153V782h4245V513.94s-345.21-261.944-615.88-434.513c-253.06-161.346-425.84-32.244-632.41 0-200.72 31.33-270.74 174.553-463.04 240.999-572.84 197.939-960.16-202.736-1564.501-176.664z"></path>
+                        <path fill="hsl(34deg 26% 10% / 0.85)" d="M909.204 493C550.67 500.797 0 367 0 367v415h4245V571.501S3686.78 180.733 3357.3 288C2888.87 440.501 2830 104 2232.57 104c-182.11 0-240.64 126.478-398.29 215.5-318.47 179.829-557.3 165.502-925.076 173.5z"></path>
+                        <path fill="hsl(34deg 16% 6% / 1)" d="M690.346 332.294C380.446 419.805 0 782 0 782h4245V648.939s-725.51-127.023-1191.41-97.544c-382.45 24.198-581.76 178.332-964.98 177.581-567.76-1.113-852.02-550.933-1398.264-396.682z"></path>
+                    </svg>
+                </div>
+
+
                 <div class="horizontal-heading-line"></div>
                 <h2>
                     <span>Il est temps de</span>
                     Prendre le bus
                 </h2>
                 <p>
-                    Rejoins <strong>les milliers de personnes</strong> qui vont transformé leur rapport à l’abondance avec Le Bus. Ton voyage commence aujourd’hui.
+                    Rejoins <strong>les milliers de personnes</strong> qui vont transformé leur rapport à l’abondance
+                    avec Le Bus. Ton voyage commence aujourd’hui.
                 </p>
+
+                <div class="countdown-wrapper">
+                    <div class="countdown-block">
+                        <div class="countdown-content">
+                            <h3>C'est la pré-vente ! 🎉</h3>
+                            <div class="container-countdown">
+                                <div id="countdown">
+                                    <ul>
+                                        <li><span id="days"></span>jours</li>
+                                        <li><span id="hours"></span>heures</li>
+                                        <li><span id="minutes"></span>Minutes</li>
+                                        <li><span id="seconds"></span>secondes</li>
+                                    </ul>
+                                </div>
+                                <div id="content" class="emoji">
+                                    <span>🥳</span>
+                                    <span>🎉</span>
+                                    <span>🎂</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="cards-wrapper">
                     <div class="purchase-cards">
@@ -610,7 +643,8 @@
                             </h3>
                             <div class="spacer-16"></div>
                             <p>
-                                Réserve ton accès aux 21 jours du bus, débloque 2 méditations inédites et découvre les coulisses de mes épisodes.
+                                Réserve ton accès aux 21 jours du bus, débloque 2 méditations inédites et découvre les
+                                coulisses de mes épisodes.
                             </p>
                             <div class="article-body">
                                 <div class="price">
@@ -623,7 +657,8 @@
                                 </div>
                                 <div class="spacer-16"></div>
                                 <div class="buy-wrapper">
-                                    <a href="https://courses.joshwcomeau.com/checkout/css-for-js/ultimate" class="buy-button-wrapper">
+                                    <a href="https://courses.joshwcomeau.com/checkout/css-for-js/ultimate"
+                                        class="buy-button-wrapper">
                                         <span class="buy-button__shadow"></span>
                                         <span class="buy-button__backdrop"></span>
                                         <span class="buy-button__contents">S'inscrire maintenant</span>
@@ -667,7 +702,7 @@
                                             stroke-linecap="round" stroke-linejoin="round" class="check-icon">
                                             <polyline points="20 6 9 17 4 12"></polyline>
                                         </svg>
-                                        Communauté Discord exclusive    
+                                        Communauté Discord exclusive
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -729,6 +764,112 @@
             </svg>
         </div>
 
+        <section class="faq-wrapper">
+            <div class="faq-header">
+                <div class="spacer-64"></div>
+                <svg viewBox="0 0 100 200" fill="none" class="faq-dot-line">
+                    <path d="M 50 0C 120 66 -20 180 50 200" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <h2>Foire aux questions</h2>
+            </div>
+            <div class="faq-grid">
+                <details class="question-wrapper">
+                    <summary class="question">Est-ce que ce programme est fait pour moi ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Si tu veux sortir du manque, comprendre l’abondance autrement et l’intégrer réellement dans ta vie, alors oui. Pas besoin de croire aux trucs perchés ni d’avoir des bases en développement personnel.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Comment ça fonctionne concrètement ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Tu suis un parcours structuré sur 21 jours avec :</p>
+                        <ul>
+                            <li>✅ 1 méditation guidée par jour, conçue pour changer ton état intérieur.</li>
+                            <li>✅ 1 micro-action simple à appliquer au quotidien.</li>
+                            <li>✅ Un chemin progressif qui t’amène à incarner l’abondance.</li>
+                        </ul>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Je n’ai pas beaucoup de temps, est-ce que ça va me prendre des heures ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Non ! Chaque journée prend moins de 20 minutes. L’essentiel, c’est la régularité et l’intégration dans ton quotidien.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Et si je ne suis pas "spirituel", est-ce que ça va me parler ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Oui. Ici, pas de blabla mystique, juste des principes concrets qui ont fait leurs preuves. L’idée n’est pas de croire en quelque chose, mais de voir par toi-même ce qui change.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Quand est-ce que j’accède au programme ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 À la sortie officielle en mars 2025. Mais si tu rejoins le pré-lancement maintenant, tu obtiens immédiatement :</p>
+                        <ul>
+                            <li>✅ 2 méditations exclusives sur l’abondance</li>
+                            <li>✅ Un accès aux coulisses de la création de mes méditations</li>
+                        </ul>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Est-ce que c’est un abonnement ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Non, c’est un paiement unique. Une fois inscrit, tu as accès au programme à vie.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Je suis déjà des formations sur l’argent, est-ce que c’est complémentaire ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Oui, complètement. Ce programme ne te donne pas une stratégie financière mais un état intérieur qui attire naturellement l’abondance.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Comment être sûr que ça va marcher pour moi ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Rien ne fonctionne tant que tu n’es pas aligné avec l’abondance intérieurement. Ce programme est là pour t’aider à incarner ce changement, et quand c’est fait, le reste suit naturellement.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Et si je change d’avis ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Je veux que ce programme t’apporte réellement quelque chose. Si après avoir suivi les 21 jours tu n’as ressenti aucun changement, je te rembourse.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Comment je m’inscris ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Clique sur le bouton ci-dessous, réserve ta place et tu reçois tout de suite tes premiers accès.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Faut-il une expérience en méditation pour suivre le programme ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Non, le programme est conçu pour tous. Les méditations sont guidées et accessibles, même si tu n’as jamais médité avant.</p>
+                    </div>
+                </details>
+                
+                <details class="question-wrapper">
+                    <summary class="question">Est-ce que ça fonctionne si je suis sceptique ?</summary>
+                    <div class="answer-wrapper">
+                        <p>👉 Oui. Pas besoin de "croire" à l’abondance, ce qui compte c’est l’expérience. Teste, applique les principes et vois par toi-même les résultats.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+
+        <h2></h2>
 
         <div class="spacer-72"></div>
 
@@ -813,6 +954,52 @@
         const offset = Math.max(0, window.innerHeight - rect.top); // Démarre quand visible
         layer.style.transform = `translateY(${offset * 0.1}px)`; // Ajuste la vitesse ici
     }
+</script>
+
+<script>
+    (function () {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy + 1,
+            dayMonth = "03/02/",
+            birthday = dayMonth + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > birthday) {
+            birthday = dayMonth + nextYear;
+        }
+        //end
+
+        const countDown = new Date(birthday).getTime(),
+            x = setInterval(function () {
+
+                const now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                if (distance < 0) {
+                    document.getElementById("headline").innerText = "It's my birthday!";
+                    document.getElementById("countdown").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                    clearInterval(x);
+                }
+                //seconds
+            }, 0)
+    }());
 </script>
 
 </html>
