@@ -345,7 +345,7 @@
 
                 <div class="van">
                     <div class="van-body">
-                        <span>The Bus Baby !</span>
+                        <span>Abondance Line</span>
                         <div class="window-layer">
                             <div class="window"></div>
                             <div class="window"></div>
@@ -539,7 +539,7 @@
 
                 <p class="standout-text bigger" style="text-align: center;">
                     <strong>
-                        Comment ça fonctionne ?
+                        Comment ça marche ?
                     </strong>
                 </p>
 
@@ -651,6 +651,35 @@
                 </div>
 
                 <div class="cards-wrapper">
+                    <div class="van purchase-van">
+                        <div class="van-body">
+                            <span>Abondance Line</span>
+                            <div class="window-layer">
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window">
+                                </div>
+                            </div>
+                            <div class="canopy"></div>
+                            <div class="roofrack">
+                                <div class="support"></div>
+                                <div class="support"></div>
+                                <div class="board"></div>
+                            </div>
+                            <div class="tailpipe">
+                                <div class="smoke"></div>
+                                <div class="smoke"></div>
+                                <div class="smoke"></div>
+                            </div>
+                            <div class="rear"></div>
+                            <div class="front"></div>
+                        </div>
+                        <div class="wheels">
+                            <div class="wheel"></div>
+                            <div class="wheel"></div>
+                        </div>
+                    </div>
                     <div class="purchase-cards">
                         <article class="purchase-card basic">
                             <h3>
@@ -673,7 +702,7 @@
                                 </div>
                                 <div class="spacer-16"></div>
                                 <div class="buy-wrapper">
-                                    <a href="https://courses.joshwcomeau.com/checkout/css-for-js/ultimate"
+                                    <a href="https://buy.stripe.com/bIYeVT75L552g6Y288?prefilled_promo_code=APLUS"
                                         class="buy-button-wrapper">
                                         <span class="buy-button__shadow"></span>
                                         <span class="buy-button__backdrop"></span>
@@ -944,6 +973,7 @@
 </body>
 
 <script>
+    // Parallax effect on the illustrations
     const layer = document.querySelector(".illustration_layers");
     const observer = new IntersectionObserver(
         ([entry]) => {
@@ -1000,7 +1030,6 @@
 
 
     // Title animation
-
     document.addEventListener("DOMContentLoaded", () => {
     const title = document.querySelector(".title-heading");
 
@@ -1010,7 +1039,7 @@
                 title.classList.add("show");
             }
         },
-        { threshold: 0.3 } // Déclenche quand 30% du titre est visible
+        { threshold: 0.3 }
     );
 
     titleObserver.observe(title);
@@ -1019,6 +1048,7 @@
 
 
 <script>
+    // Countdown before launch
     (function () {
         const second = 1000,
             minute = second * 60,

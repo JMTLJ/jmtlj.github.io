@@ -820,6 +820,16 @@ section.hero-wrapper {
     z-index: -1;
     -webkit-transform: rotate(354deg);
 
+    &.purchase-van {
+        bottom: 380px;
+        left: 70vw;
+        z-index: 0;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
+
     .van-body {
         background-color: @orange-2;
         border-radius: 30px 50px 10px 5px;
