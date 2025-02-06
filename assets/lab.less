@@ -58,6 +58,8 @@
 }
 
 @import (inline) url('https://fonts.cdnfonts.com/css/sriracha');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lacquer&display=swap');
+
 
 @font-family: 'Wotfard';
 @font-family-mono: 'League Mono', 'Fira Mono', monospace;
@@ -825,6 +827,20 @@ section.hero-wrapper {
         width: 210px;
         position: relative;
         animation: bounce 0.25s ease-in-out infinite alternate;
+
+        span {
+            position: absolute;
+            top: 52px;
+            left: 43px;
+            z-index: 16;
+            opacity: 0.34;
+            color: gold;
+            font-family: "Chewy", serif;
+            font-size: 1.5em;
+            background: linear-gradient(to right, #ADD8E6, #FFFF00, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
         .canopy {
             position: relative;
