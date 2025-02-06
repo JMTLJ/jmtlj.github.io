@@ -392,11 +392,6 @@
                         <h1 class="title-heading">
                             <span class="line-one">le bus <span class="thin">de</span></span>
                             <span class="line-two">l'abondance</span>
-
-                            <span class="line-two"
-                                style="-webkit-text-fill-color: #f2e5c9; margin-top: 1rem; font-size: min(5vw, 37px);">tout
-                                simplement !</span>
-                            <span class="line-three"><span class="thin"></span></span>
                         </h1>
                     </div>
                 </div>
@@ -1001,6 +996,24 @@
         van.style.left = `${horizontalMove}vw`;
         van.style.bottom = `${verticalLift + currentLeftOffset}px`; // Le bus monte avec une position différente selon l'écran
     }
+
+
+    // Title animation
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const title = document.querySelector(".title-heading");
+
+    const titleObserver = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                title.classList.add("show");
+            }
+        },
+        { threshold: 0.3 } // Déclenche quand 30% du titre est visible
+    );
+
+    titleObserver.observe(title);
+});
 </script>
 
 
