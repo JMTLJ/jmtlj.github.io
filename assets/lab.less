@@ -58,14 +58,14 @@
 }
 
 @import (inline) url('https://fonts.cdnfonts.com/css/sriracha');
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lacquer&family=Permanent+Marker&family=Qwitcher+Grypen:wght@400;700&display=swap');
 
 
 @font-family: 'Wotfard';
 @font-family-mono: 'League Mono', 'Fira Mono', monospace;
 
 @color-text: hsl(0deg, 0%, 100%);
-@color-background: hsl(274deg, 16%, 8%);
+@color-background: hsl(249, 17%, 8%);
 @color-blurred-background: hsla(210deg, 30%, 8%, 0.85);
 
 @color-primary: hsl(333deg, 100%, 52%);
@@ -828,6 +828,7 @@ section.hero-wrapper {
         @media (max-width: 1000px) {
             display: none;
         }
+        
     }
 
     .van-body {
@@ -841,15 +842,22 @@ section.hero-wrapper {
         span {
             position: absolute;
             top: 52px;
-            left: 43px;
+            left: 33px;
             z-index: 16;
             opacity: 0.34;
             color: gold;
-            font-family: "Chewy", serif;
+            font-weight: bold;
+            font-family: "Lacquer", serif;
             font-size: 1.5em;
             background: linear-gradient(to right, #ADD8E6, #FFFF00, #FFA500);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            &.purchase-van-text {
+                font-family: "Chewy", serif;
+                left: 23px;
+                font-weight: 400;
+            }
         }
 
         .canopy {
@@ -1342,20 +1350,36 @@ footer {
             margin-bottom: 32px;
         }
 
-        .gold-standout {
-            background-color: rgb(255, 178, 62);
-            background-image: linear-gradient(268.67deg, rgb(255, 255, 255) 3.43%, rgb(255, 240, 102) 15.69%, rgb(255, 163, 26) 55.54%, rgb(255, 0, 115) 99%);
-            background-size: 100%;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        // .gold-standout {
+        //     background-color: rgb(255, 178, 62);
+        //     background-image: linear-gradient(268.67deg, rgb(255, 255, 255) 3.43%, rgb(255, 240, 102) 15.69%, rgb(255, 163, 26) 55.54%, rgb(255, 0, 115) 99%);
+        //     background-size: 100%;
+        //     background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        // }
 
-        .highlighted-text {
+        .gold-standout {
+
             position: relative;
             padding: 4px 8px;
             margin-left: -8px;
             margin-right: -4px;
             color: rgb(255, 170, 51);
+        }
+
+        .signature {
+            margin-top: 8px;
+            font-size: 14px;
+
+            .name {
+                font-family: "Qwitcher Grypen", serif;
+                font-style: normal;
+                font-size: 3em;
+            }
+
+            .title {
+                font-style: italic;
+            }
         }
     }
 }
@@ -1872,7 +1896,6 @@ footer {
 
                     grid-area: basic;
                     --filter: grayscale(0%);
-
                     padding: 4px;
                     max-width: 400px;
                     border-radius: 8px;
@@ -1934,9 +1957,23 @@ footer {
                             }
 
                             .old-price {
-                                font-size: 2.5rem;
-                                text-decoration: line-through;
-                                margin-right: 8px;
+                                color: @color-gray-700;
+                                position: relative;
+                                font-size: 1.75rem;
+                                font-weight: 400;
+                                margin-right: 16px;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    inset: 0px;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 3px;
+                                    background-color: rgba(255, 0, 64, 0.85);
+                                    transform: rotate(-10deg);
+                                    border-radius: 4px;
+                                }
 
                                 span.euros {
                                     font-size: 0.65em;
@@ -1944,7 +1981,6 @@ footer {
                                     display: inline-block;
                                 }
                             }
-
                         }
 
                         .buy-wrapper {
@@ -2102,19 +2138,11 @@ footer {
                                 }
                             }
                         }
-                    }
-
-
-
-                    
-                }
-                
+                    }   
+                }             
             }
-
         }
-
     }
-    
 }
 
 #how-it-works {
