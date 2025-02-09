@@ -874,7 +874,6 @@ section.hero-wrapper {
             width: 90px;
             height: 3px;
             background-color: @black;
-            opacity: 0.5;
             position: relative;
             top: -68px;
             left: 75px;
@@ -1359,16 +1358,11 @@ footer {
         // }
 
         .gold-standout {
-
-            position: relative;
-            padding: 4px 8px;
-            margin-left: -8px;
-            margin-right: -4px;
             color: rgb(255, 170, 51);
         }
 
         .signature {
-            margin-top: 8px;
+            margin-top: 5em;
             font-size: 14px;
 
             .name {
@@ -1709,10 +1703,14 @@ footer {
     }
 }
 
+@purchase-sky: #322a59;
+@purchase-earth: #1a1a1a;
+
 .purchase-wrapper {
 
     section.purchase-section {
         position: relative;
+        background: linear-gradient(180deg, hsl(249, 17%, 8%) 15%, #322a59 60%, hsl(249deg 25.77% 11.69%) 75%, hsl(249, 17%, 8%) 95%);
 
         .purchase-section-backdrop {
             position: absolute;
@@ -1724,8 +1722,21 @@ footer {
             flex-direction: column;
             -webkit-box-pack: end;
             justify-content: flex-end;
-            opacity: 0.5;
             background: linear-gradient(rgba(107, 87, 46, 0), rgba(122, 92, 31, 0.95));
+
+            svg {
+                path.hills-3 {
+                    fill: hsl(249, 25.77%, 11.69%);
+                }
+
+                path.hills-2 {
+                    fill: hsl(34deg 26% 10% / 0.85);
+                }
+
+                path.hills-1 {
+                    fill: hsl(34deg 16% 6% / 0.375);
+                }
+            }
         }
 
         .horizontal-heading-line {
@@ -1813,55 +1824,49 @@ footer {
                     text-align: center;
                     padding: 0em 1em 1em 1em;
 
-
-
                     h1 {
                         font-weight: normal;
                         letter-spacing: .125rem;
                         text-transform: uppercase;
                       }
                       
-                      li {
+                    li {
                         display: inline-block;
-                        font-size: 1em;
+                        font-size: small;
                         list-style-type: none;
                         padding: 1em;
                         text-transform: uppercase;
-                      }
+                    }
                       
-                      li span {
+                    li span {
                         display: block;
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                         font-weight: 600;
-                      }
+                    }
                       
-                      .emoji {
+                    .emoji {
                         display: none;
                         padding: 1rem;
-                      }
+                    }
                       
-                      .emoji span {
+                    .emoji span {
                         font-size: 4rem;
                         padding: 0 .5rem;
-                      }
+                    }
 
-                      @media all and (max-width: 768px) {
+                    @media all and (max-width: 768px) {
                         h1 {
-                          font-size: calc(1.5rem * 0.75);
+                            font-size: calc(1.5rem * 0.75);
                         }
                         
                         li {
-                          font-size: calc(1.125rem * 0.75);
+                            font-size: calc(1.125rem * 0.75);
                         }
                         
                         li span {
-                          font-size: calc(3.375rem * 0.75);
+                            font-size: calc(3.375rem * 0.75);
                         }
-                      }
-                }
-
-                h3 {
-                    
+                    }
                 }
             }
         }
@@ -1879,7 +1884,7 @@ footer {
                 justify-content: center;
                 align-items: flex-start;
                 gap: 32px;
-                padding: 110px 16px 0px;
+                padding: 0px 16px 0px;
                 max-width: 1200px;
                 margin: 0px auto;
                 scroll-margin-top: 100px;
@@ -1981,6 +1986,15 @@ footer {
                                     display: inline-block;
                                 }
                             }
+                        }
+
+                        .current-event-label {
+                            margin-top: 0;
+                            text-align: center;
+                            color: red;
+                            font-weight: 400;
+                            margin-bottom: 2em;
+                            font-size: medium;
                         }
 
                         .buy-wrapper {
