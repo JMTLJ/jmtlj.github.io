@@ -560,7 +560,7 @@ section.hero-wrapper {
 
             &.bigger {
                 font-size: 36px;
-                font-size: min(50px, 6vw);
+                font-size: min(50px, 8vw);
             }
         }
 
@@ -1814,6 +1814,10 @@ footer {
             gap: 64px;
             margin-top: 4rem;
 
+            @media (max-width: 768px) {
+                display: none;
+            }
+
             .countdown-block {
                 position: relative;
                 display: flex;
@@ -2257,6 +2261,10 @@ section.faq-wrapper {
             overflow: visible;
             width: 100px;
             justify-self: center;
+
+            @media (max-width: 500px) {
+                display: none;
+            }
         
             path {
                 stroke: @color-gray-700;
@@ -2283,6 +2291,11 @@ section.faq-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 32px;
         padding: 0px 32px;
+
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+            padding: 0px 16px;
+        }
 
         details.question-wrapper {
             scroll-margin-top: 150px;
