@@ -981,10 +981,11 @@
             const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
             const horizontalMove = scrollPercent * 300;
             const verticalLift = Math.pow(scrollPercent, 2) * 2000;
-            const currentLeftOffset = window.innerWidth < 650 ? 0 : 120;
+            const currentBottomOffset = window.innerWidth < 650 ? -30 : 120;
+            const currentLeftOffset = window.innerWidth < 650 ? -40 : 0;
 
-            van.style.left = `${horizontalMove}vw`;
-            van.style.bottom = `${verticalLift + currentLeftOffset}px`;
+            van.style.left = `${horizontalMove + currentLeftOffset}vw`;
+            van.style.bottom = `${verticalLift + currentBottomOffset}px`;
         }
 
         function handleScroll() {

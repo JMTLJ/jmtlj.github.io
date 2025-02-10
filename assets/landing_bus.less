@@ -65,7 +65,8 @@
 @font-family-mono: 'League Mono', 'Fira Mono', monospace;
 
 @color-text: hsl(0deg, 0%, 100%);
-@color-background: hsl(244.78deg 22.38% 10.09%);
+@color-background: hsl(244.78deg 23.43% 14.52%);
+
 @color-blurred-background: hsla(210deg, 30%, 8%, 0.85);
 
 @color-primary: hsl(333deg, 100%, 52%);
@@ -1711,9 +1712,6 @@ footer {
     }
 }
 
-@purchase-sky: #322a59;
-@purchase-earth: #1a1a1a;
-
 .purchase-wrapper {
 
     section.purchase-section {
@@ -1776,7 +1774,11 @@ footer {
             width: max-content;
             margin: 0px auto;
             padding: 0px 32px;
-            background: linear-gradient(180deg, #151420, #1c181c);
+            background: linear-gradient(
+                180deg,
+                @color-background 0%,
+                #241f28 100%
+            );
 
             span {
                 display: block;
