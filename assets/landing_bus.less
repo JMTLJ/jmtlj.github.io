@@ -789,7 +789,7 @@ section.hero-wrapper {
 
                     .line-one {
                         display: block;
-                        font-size: min(15vw, 130px);
+                        font-size: min(17vw, 130px);
 
                         .thin {
                             font-weight: 300;
@@ -799,7 +799,7 @@ section.hero-wrapper {
 
                     .line-two {
                         display: block;
-                        font-size: min(10.5vw, 82px);
+                        font-size: min(10.7vw, 82px);
 
                         .thin {
                             font-weight: 300;
@@ -810,11 +810,11 @@ section.hero-wrapper {
                     .line-three {
                         display: block;
                         font-size: min(14vw, 97px);
-                        letter-spacing: -0.1vw;
 
-                        .thin {
-                            font-weight: 300;
-                            font-size: 0.75em;
+                        &.thin {
+                            margin-top: 8px;
+                            font-weight: 500;
+                            font-size: min(4.3vw, 33px);
                         }
                     }
                 }
@@ -1308,10 +1308,11 @@ footer {
         position: relative;
 
         .about-me-photo {
+            transform: translateX(-96px);
 
             img {
                 isolation: isolate;
-                transform: translateX(-96px);
+                
                 position: relative;
                 width: 500px;
                 height: 500px;
@@ -1325,6 +1326,16 @@ footer {
                 filter: blur(100px);
                 opacity: 0.4;
                 transform: translateX(25%);
+            }
+
+            .about-me-photo-gradient {
+                position: absolute;
+                z-index: 2;
+                inset: 0px;
+                width: 500px;
+                height: 500px;
+                background: linear-gradient(to top, rgba(21, 17, 24, 0.75), rgba(21, 17, 24, 0) 50%);
+                border-radius: 50%;
             }
         }
 
