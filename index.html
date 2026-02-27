@@ -38,9 +38,56 @@
             <p class="text-lg text-gray-300 mb-12">Je tente de faire du bien autour de moi à travers différents projets. Inscris-toi ci-dessous pour être tenu au courant.</p>
             
             <div class="w-full max-w-md mx-auto">
-                <iframe data-tally-src="https://tally.so/embed/ob24vP?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="253" frameborder="0" marginheight="0" marginwidth="0" title="Tes informations :"></iframe>
+                <form id="subscribe-form" class="space-y-4">
+                    <input type="text" name="name" placeholder="Ton prénom" required
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 transition">
+                    <input type="email" name="email" placeholder="Ton email" required
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 transition">
+                    <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+                    <button type="submit" id="submit-btn"
+                        class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 font-semibold hover:bg-gray-200 transition">
+                        Je m'inscris
+                    </button>
+                    <p id="form-message" class="text-sm text-center hidden"></p>
+                </form>
             </div>
-            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+            <script>
+            document.getElementById('subscribe-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const btn = document.getElementById('submit-btn');
+                const msg = document.getElementById('form-message');
+                const name = this.name.value.trim();
+                const email = this.email.value.trim();
+                if (this.website.value) return;
+                btn.disabled = true;
+                btn.textContent = 'Inscription...';
+                msg.classList.add('hidden');
+                try {
+                    const resp = await fetch('https://listmonk.jmgops.fr/api/public/subscription', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({
+                            email: email,
+                            name: name,
+                            list_uuids: ['0838b805-6637-49e6-abca-8d0f2d6610f3']
+                        })
+                    });
+                    if (resp.ok) {
+                        msg.textContent = 'Vérifie ta boîte mail pour confirmer ton inscription !';
+                        msg.className = 'text-sm text-center text-green-400';
+                        this.reset();
+                    } else {
+                        msg.textContent = 'Tu es déjà inscrit(e) !';
+                        msg.className = 'text-sm text-center text-yellow-400';
+                    }
+                } catch (err) {
+                    msg.textContent = 'Erreur réseau. Réessaie dans un instant.';
+                    msg.className = 'text-sm text-center text-red-400';
+                }
+                btn.disabled = false;
+                btn.textContent = 'Je m\'inscris';
+            });
+            </script>
         </div>
     </div>
 </body>
