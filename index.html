@@ -164,13 +164,6 @@
     display:flex; flex-direction:column; align-items:center; gap:10px;
     text-align:center;
   }
-  /* La lueur déborde de la section : coupée à ses bords, elle se lisait
-     comme une bande. Les voisins n'ont pas de fond, elle respire à travers. */
-  .note::before {
-    content:""; position:absolute; left:0; right:0; top:-160px; bottom:-160px;
-    pointer-events:none;
-    background:radial-gradient(30rem 16rem at 50% 50%, rgba(199,154,107,.07), transparent 68%);
-  }
   .note p {
     position:relative;
     margin:0;
