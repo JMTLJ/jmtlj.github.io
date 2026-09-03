@@ -158,34 +158,6 @@
   .point { margin:0 .35em; }
   .u { white-space:nowrap; }
 
-  /* ---------- Le mot de la fin — une signature, pas un paragraphe ---------- */
-  .note {
-    position:relative;
-    padding:32px 20px 96px;
-    display:flex; flex-direction:column; align-items:center; gap:10px;
-    text-align:center;
-  }
-  .note p {
-    position:relative;
-    margin:0;
-    font-family:Fraunces, Georgia, 'Times New Roman', serif;
-    font-optical-sizing:auto;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(1.375rem, 3.6vw, 1.625rem);
-    line-height:1.4;
-    color:var(--sable);
-  }
-  .note .signature {
-    position:relative;
-    font-family:Fraunces, Georgia, 'Times New Roman', serif;
-    font-optical-sizing:auto;
-    font-style:italic;
-    font-weight:400;
-    font-size:1.125rem;
-    color:var(--sable-500);
-  }
-
   /* ---------- Pied de page ---------- */
   footer {
     position:relative; z-index:1;
@@ -193,13 +165,6 @@
     padding:44px 20px 60px;
     display:flex; flex-direction:column; align-items:center; gap:16px;
     text-align:center;
-  }
-  .pied-label {
-    font-size:.75rem;
-    font-weight:600;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--sable-400);
   }
   .plateformes {
     display:flex; flex-wrap:wrap; justify-content:center;
@@ -268,15 +233,9 @@
     </div>
     <p class="preuve leve leve-5"><span class="u">300k+ écoutes mensuelles</span> <span class="point">·</span> <span class="u">600+ méditations,</span> <span class="gratuit u">toutes gratuites</span></p>
   </section>
-
-  <section class="note">
-    <p>À plus dans le bus&nbsp;!</p>
-    <span class="signature">Harry</span>
-  </section>
 </main>
 
 <footer>
-  <p class="pied-label">Merci.</p>
   <nav class="plateformes" aria-label="Plateformes du podcast">
     <a href="https://open.spotify.com/show/3rOjo65PYHynw0UENaE3Qi">Spotify</a>
     <a href="https://podcasts.apple.com/us/podcast/je-publie-une-m%C3%A9ditation-guid%C3%A9e-tous-les-jours/id1519526308">Apple Podcasts</a>
