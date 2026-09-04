@@ -1,80 +1,317 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Je médite tous les jours</title>
+<meta name="description" content="Politique de confidentialité de l'application Je médite tous les jours (méditations guidées), éditée par JMG HARRY et publiée par Punchlines sur Google Play et par Harry Gueguen sur l'App Store. Aucun compte, aucune publicité : l'essentiel reste sur votre téléphone, et ce qui n'y reste pas est décrit ici.">
+<style>
+  :root{
+    --fg:#1c1d22; --fg-2:#5a5d68; --bg:#ffffff; --bg-2:#f6f6f8;
+    --bord:#e3e4e9; --accent:#b45a3c; --ok:#0f7b52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --fg:#e8e6e1; --fg-2:#a3a29d; --bg:#16171c; --bg-2:#1e1f26;
+           --bord:#2c2e37; --accent:#f5934d; --ok:#4ec08c; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:0 1.25rem 5rem;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.7; color:var(--fg); background:var(--bg);
+    -webkit-text-size-adjust:100%;
+  }
+  main{max-width:46rem; margin:0 auto}
+  header{padding:3.5rem 0 1.5rem; border-bottom:1px solid var(--bord); margin-bottom:2.5rem}
+  h1{font-size:clamp(1.7rem,4.5vw,2.3rem); line-height:1.2; margin:0 0 .6rem}
+  .maj{color:var(--fg-2); font-size:.95rem; margin:0}
+  h2{font-size:1.25rem; margin:2.75rem 0 .75rem; line-height:1.3}
+  h3{font-size:1.03rem; margin:1.75rem 0 .5rem}
+  p,li{font-size:1rem}
+  ul{padding-left:1.25rem}
+  li{margin:.35rem 0}
+  a{color:var(--accent)}
+  .resume{
+    background:var(--bg-2); border:1px solid var(--bord); border-radius:12px;
+    padding:1.25rem 1.4rem; margin:0 0 1rem;
+  }
+  .resume p{margin:0 0 .5rem; font-weight:600}
+  .resume ul{margin:0; padding-left:1.2rem}
+  .resume li{font-weight:400}
+  table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem}
+  th,td{text-align:left; padding:.6rem .7rem; border-bottom:1px solid var(--bord); vertical-align:top}
+  th{background:var(--bg-2); font-weight:600}
+  .tag{display:inline-block; font-size:.8rem; font-weight:600; padding:.1rem .5rem;
+       border-radius:99px; background:var(--bg-2); border:1px solid var(--bord); white-space:nowrap}
+  .wrap-t{overflow-x:auto}
+  footer{margin-top:3.5rem; padding-top:1.5rem; border-top:1px solid var(--bord);
+         color:var(--fg-2); font-size:.9rem}
+  code{background:var(--bg-2); padding:.1rem .35rem; border-radius:4px; font-size:.9em}
+</style>
 </head>
+<body>
+<main>
 
-<body class="bg-gray-900 text-gray-200">
-    <div class="max-w-3xl mx-auto px-6 py-24">
-        <h1 class="text-3xl font-bold mb-6">Politique de Confidentialité</h1>
+<header>
+  <h1>Politique de confidentialité</h1>
+  <p class="maj">Application <strong>Je médite tous les jours</strong> — méditations guidées · Dernière mise à jour : 4 septembre 2026</p>
+</header>
 
-        <p class="mb-4">Dernière mise à jour : Février 2025</p>
+<div class="resume">
+  <p>L'essentiel, en trois points :</p>
+  <ul>
+    <li><strong>Aucun compte à créer.</strong> Ni inscription, ni mot de passe. Au premier lancement, un court questionnaire vous demande votre prénom et — si vous le souhaitez seulement — votre adresse e-mail.</li>
+    <li><strong>L'essentiel reste sur votre téléphone.</strong> Favoris, historique, humeurs, progression : rien de tout cela ne quitte votre appareil. Seules vos réponses au questionnaire de bienvenue sont enregistrées sur notre serveur (section&nbsp;4).</li>
+    <li><strong>Aucune publicité, aucune revente.</strong> L'application mesure son usage de façon anonyme (section&nbsp;5) — jamais avec votre nom ou votre e-mail — et ne transmet rien à des fins publicitaires.</li>
+  </ul>
+</div>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">1. Données collectées</h2>
-            <p>Nous collectons certaines informations nécessaires à l’utilisation de notre programme :</p>
-            <ul class="list-disc list-inside mt-2">
-                <li>Nom, prénom, adresse email (via Stripe lors de l’achat).</li>
-                <li>Données de paiement (gérées uniquement par Stripe : carte bancaire, adresse de facturation).</li>
-                <li>Emails collectés via Flodesk pour la communication avec les utilisateurs.</li>
-            </ul>
-        </section>
+<h2>1. Quelle application, et qui en est responsable</h2>
+<p>
+  Cette politique couvre l'application mobile <strong>Je médite tous les jours</strong>
+  (méditations guidées), distribuée sur les deux magasins d'applications&nbsp;:
+</p>
+<ul>
+  <li>
+    <strong>Google Play</strong> — « Je médite tous les jours », publiée par le développeur
+    <strong>Punchlines</strong> · identifiant de l'application&nbsp;:
+    <code>com.harryjmg.jemeditetouslesjours</code>
+  </li>
+  <li>
+    <strong>App Store</strong> — « Je médite tous les jours », publiée par le développeur
+    <strong>Harry Gueguen</strong> · identifiant de l'application&nbsp;:
+    <code>com.harryjmg.lebus</code>
+  </li>
+</ul>
+<p>
+  Les deux comptes de publication, « Punchlines » sur Google Play et « Harry Gueguen »
+  sur l'App Store, sont exploités par la même personne morale, qui édite l'application
+  et répond de vos données&nbsp;:
+</p>
+<ul>
+  <li><strong>JMG HARRY</strong></li>
+  <li>Siège social : LES GACHOTS, 77510 VERDELOT, France</li>
+  <li>SIRET : 838 054 690 00014 — SIREN : 838 054 690</li>
+  <li>Activité (NAF/APE) : Conseil en systèmes et logiciels informatiques</li>
+  <li>Contact : <a href="mailto:harry@jemeditetouslesjours.fr">harry@jemeditetouslesjours.fr</a></li>
+</ul>
+<p>
+  JMG HARRY est le responsable de traitement au sens du Règlement général sur la
+  protection des données (RGPD).
+</p>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">2. Utilisation des données</h2>
-            <p>Les données collectées sont utilisées pour :</p>
-            <ul class="list-disc list-inside mt-2">
-                <li>Assurer l’accès au programme et à l’espace membre.</li>
-                <li>Envoyer des emails liés au programme et aux mises à jour.</li>
-                <li>Fournir un support client en cas de besoin.</li>
-            </ul>
-        </section>
+<h2>2. Aucune création de compte</h2>
+<p>
+  L'application fonctionne <strong>sans inscription et sans mot de passe</strong>. Il n'existe
+  ni espace personnel, ni connexion via un réseau social. Le questionnaire de
+  bienvenue vous demande votre prénom et, <strong>si vous le souhaitez seulement</strong>,
+  votre adresse e-mail (section&nbsp;4) : en dehors de cette adresse — que vous êtes
+  libre de ne pas donner — nous ne détenons aucun moyen de vous identifier ni de
+  relier l'usage de l'application à une personne.
+</p>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">3. Partage des données</h2>
-            <p>Nous partageons uniquement vos informations avec :</p>
-            <ul class="list-disc list-inside mt-2">
-                <li><strong>Stripe</strong> : gestion des paiements.</li>
-                <li><strong>Flodesk</strong> : gestion des emails.</li>
-            </ul>
-        </section>
+<h2>3. Ce qui reste sur votre téléphone</h2>
+<p>
+  L'application enregistre un certain nombre d'informations <strong>localement, dans la
+  mémoire de votre appareil</strong>. À l'exception du questionnaire de bienvenue
+  (section&nbsp;4), ces données ne sont ni transmises, ni consultables par nous, ni
+  sauvegardées sur un serveur.
+</p>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">4. Sécurité des données</h2>
-            <p>Vos données sont stockées de manière sécurisée et cryptées dans notre base de données. Nous mettons en
-                place des mesures pour protéger vos informations contre tout accès non autorisé.</p>
-        </section>
+<div class="wrap-t">
+<table>
+  <thead>
+    <tr><th>Ce qui est enregistré</th><th>À quoi ça sert</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Vos réponses au questionnaire de bienvenue (prénom, objectifs, expérience de la méditation, moment préféré, intention écrite, comment vous avez connu l'application, adresse e-mail si donnée). Elles sont aussi enregistrées sur notre serveur — voir la section&nbsp;4.</td><td>Vous proposer des épisodes adaptés dès le premier lancement</td></tr>
+    <tr><td>Votre progression dans un épisode (épisode en cours et position d'écoute)</td><td>Reprendre la lecture où vous l'aviez laissée</td></tr>
+    <tr><td>Vos favoris</td><td>Retrouver les épisodes que vous avez aimés</td></tr>
+    <tr><td>Votre historique d'écoute et vos statistiques (nombre d'épisodes, minutes écoutées)</td><td>Afficher votre activité dans l'onglet profil</td></tr>
+    <tr><td>Votre série de jours consécutifs et votre point du jour</td><td>Suivre votre régularité</td></tr>
+    <tr><td>Votre humeur avant et après un épisode</td><td>Vous permettre d'observer l'effet de votre pratique</td></tr>
+    <tr><td>Vos recherches récentes et votre filtre de durée</td><td>Confort de navigation</td></tr>
+    <tr><td>Vos réglages (minuteur d'arrêt, lecture en mode silencieux)</td><td>Conserver vos préférences</td></tr>
+    <tr><td>Les épisodes téléchargés hors ligne (fichiers audio), réservés à l'abonnement</td><td>Écouter sans connexion internet</td></tr>
+  </tbody>
+</table>
+</div>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">5. Droits des utilisateurs</h2>
-            <p>Vous avez le droit de :</p>
-            <ul class="list-disc list-inside mt-2">
-                <li>Accéder aux données que nous avons sur vous.</li>
-                <li>Demander leur modification ou suppression.</li>
-            </ul>
-            <p>Pour toute demande, contactez-nous à <a href="mailto:harry@jemeditetouslesjours.fr"
-                    class="text-blue-400">harry@jemeditetouslesjours.fr</a></p>
-        </section>
+<h3>Comment effacer ces données</h3>
+<ul>
+  <li>Depuis l'application : le bouton <strong>« Réinitialiser »</strong> de l'écran profil efface vos données d'usage.</li>
+  <li><strong>Désinstaller l'application</strong> supprime l'intégralité de ces données, y compris les épisodes téléchargés.</li>
+</ul>
+<p>
+  Ces gestes effacent ce qui vit sur votre téléphone. Pour la copie de vos
+  réponses au questionnaire conservée sur notre serveur, voir les sections&nbsp;4
+  et&nbsp;9 (un simple e-mail suffit).
+</p>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">6. Cookies</h2>
-            <p>Nous utilisons des cookies uniquement sur la partie connectée du site pour améliorer la navigation. Ces
-                cookies permettent d’éviter des appels répétés à notre base de données et d’assurer une meilleure
-                expérience utilisateur.</p>
-            <p>Il n’est pas possible de refuser ces cookies car ils sont essentiels au fonctionnement du programme.</p>
-        </section>
+<h2>4. Le questionnaire de bienvenue</h2>
+<p>
+  Au premier lancement, l'application vous pose quelques questions pour composer
+  votre programme : votre prénom, vos objectifs et leur ordre d'importance,
+  votre expérience de la méditation, le moment de la journée où vous préférez
+  pratiquer, l'intention que vous écrivez avec vos mots, la façon dont vous avez
+  connu l'application — et votre <strong>adresse e-mail</strong>, qui est
+  <strong>facultative</strong> : vous pouvez continuer sans la donner.
+</p>
+<p>
+  Ces réponses sont enregistrées sur notre serveur (hébergé par Supabase),
+  associées à l'<strong>identifiant anonyme</strong> de votre appareil. Elles servent à :
+</p>
+<ul>
+  <li><strong>personnaliser votre programme</strong> et améliorer l'application ;</li>
+  <li>si vous avez donné votre adresse e-mail : <strong>vous tenir au courant des
+      actualités</strong> du podcast et de l'application.</li>
+</ul>
+<p>
+  Votre adresse e-mail n'est <strong>jamais revendue ni partagée</strong>, et vous pouvez
+  demander à tout moment l'effacement de ces réponses — ou seulement de
+  l'adresse — par un simple e-mail (section&nbsp;9).
+</p>
 
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">7. Contact</h2>
-            <p>Pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter à <a
-                    href="mailto:harry@jemeditetouslesjours.fr" class="text-blue-400">harry@jemeditetouslesjours.fr</a>
-            </p>
-        </section>
-    </div>
+<h2>5. La mesure d'audience</h2>
+<p>
+  Pour savoir ce qui sert et ce qui ne sert pas, l'application mesure son usage
+  avec <strong>PostHog</strong>, un outil hébergé dans l'Union européenne. Ces mesures sont
+  rattachées à un <strong>identifiant anonyme</strong> généré par l'application — jamais à
+  votre prénom, votre adresse e-mail ou votre intention, qui ne sont pas
+  transmis à cet outil.
+</p>
+<ul>
+  <li>Des <strong>événements d'usage</strong> : écran affiché, écoute démarrée ou terminée,
+      étape du questionnaire franchie, réponse au point du jour…</li>
+  <li>Des <strong>informations techniques générales</strong> : modèle d'appareil, version de
+      l'application et du système.</li>
+</ul>
+<p>
+  Ces mesures servent uniquement à améliorer l'application. Elles ne sont ni
+  revendues, ni croisées avec d'autres services, ni utilisées à des fins
+  publicitaires.
+</p>
+
+<h2>6. Ce qui transite par un serveur</h2>
+<p>
+  Pour fonctionner, l'application télécharge du contenu depuis internet. Ces
+  échanges servent d'abord à <strong>vous envoyer du contenu</strong> ; ce que l'application
+  envoie en retour se limite à ce que décrivent les sections&nbsp;4 et&nbsp;5.
+</p>
+<p>
+  Comme pour toute connexion internet, le serveur contacté reçoit techniquement
+  votre <strong>adresse IP</strong> et l'identifiant du fichier demandé — c'est indispensable
+  pour vous répondre. Nous ne les exploitons pas et n'en tirons aucun profil.
+</p>
+
+<div class="wrap-t">
+<table>
+  <thead>
+    <tr><th>Service</th><th>Rôle</th><th>Ce qu'il reçoit</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Supabase</strong><br><span class="tag">Hébergement du contenu</span></td>
+      <td>Héberge le catalogue des épisodes, les transcriptions (paroles affichées pendant l'écoute), les illustrations — et reçoit vos réponses au questionnaire de bienvenue (section&nbsp;4)</td>
+      <td>Votre adresse IP et la ressource demandée ; vos réponses au questionnaire, une seule fois, à la fin de celui-ci.</td>
+    </tr>
+    <tr>
+      <td><strong>PostHog</strong><br><span class="tag">Mesure d'audience</span></td>
+      <td>Mesure l'usage de l'application pour l'améliorer (section&nbsp;5)</td>
+      <td>Un <strong>identifiant anonyme</strong> et des événements d'usage. Ni votre prénom, ni votre e-mail, ni votre intention.</td>
+    </tr>
+    <tr>
+      <td><strong>Ausha</strong><br><span class="tag">Diffusion audio</span></td>
+      <td>Héberge et diffuse les fichiers audio des épisodes du podcast, en écoute directe ou en téléchargement</td>
+      <td>Votre adresse IP et le fichier audio demandé.</td>
+    </tr>
+    <tr>
+      <td><strong>RevenueCat</strong><br><span class="tag">Gestion de l'abonnement</span></td>
+      <td>Vérifie techniquement si votre abonnement est actif, et gère la restauration d'achat</td>
+      <td>Un <strong>identifiant anonyme</strong> généré automatiquement par l'application, ainsi que l'état de votre abonnement. Ni votre nom, ni votre e-mail, ni vos coordonnées bancaires.</td>
+    </tr>
+    <tr>
+      <td><strong>Apple — App Store</strong><br><span class="tag">Distribution et paiement</span></td>
+      <td>Distribue l'application et traite le paiement de l'abonnement, l'essai gratuit et les renouvellements</td>
+      <td>Les informations liées à votre compte Apple et à votre paiement. <strong>Ces données sont traitées par Apple seul : l'application n'y a jamais accès</strong> et ne voit à aucun moment vos coordonnées bancaires.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+  Ces prestataires traitent ces informations techniques selon leurs propres
+  politiques de confidentialité, que nous vous invitons à consulter.
+</p>
+
+<h2>7. Ce que l'application ne fait pas</h2>
+<ul>
+  <li><strong>Aucune publicité</strong> et aucun identifiant publicitaire.</li>
+  <li><strong>Aucun traceur publicitaire ni suivi entre applications</strong> — la mesure d'audience de la section&nbsp;5 est anonyme, interne, et ne suit que l'usage de cette application.</li>
+  <li><strong>Aucun accès au microphone</strong>, à la caméra, à vos contacts, à vos photos ni à votre position.</li>
+  <li><strong>Aucune connexion à un réseau social.</strong></li>
+  <li><strong>Aucune vente, location ou transmission commerciale</strong> de données à des tiers.</li>
+</ul>
+
+<h2>8. Combien de temps les données sont conservées</h2>
+<ul>
+  <li><strong>Sur votre téléphone :</strong> aussi longtemps que l'application reste installée. Ces données disparaissent dès que vous utilisez le bouton « Réinitialiser » ou que vous désinstallez l'application. Nous ne leur appliquons aucune durée puisque nous n'y avons jamais accès.</li>
+  <li><strong>Vos réponses au questionnaire de bienvenue</strong> (section&nbsp;4) : conservées tant qu'elles servent à ce pour quoi vous les avez données, et effacées sur simple demande (section&nbsp;9).</li>
+  <li><strong>La mesure d'audience</strong> (section&nbsp;5) : conservée chez PostHog, sous identifiant anonyme, selon sa politique de confidentialité.</li>
+  <li><strong>Journaux techniques</strong> (adresse IP) chez les hébergeurs Supabase et Ausha : conservés par ces prestataires selon leurs propres politiques, à des fins de sécurité et de bon fonctionnement.</li>
+  <li><strong>Abonnement :</strong> les informations relatives à votre abonnement sont conservées par Apple et RevenueCat pendant la durée de la relation contractuelle, puis selon les obligations légales et comptables applicables.</li>
+</ul>
+
+<h2>9. Vos droits</h2>
+<p>
+  Le RGPD vous garantit un droit d'accès, de rectification, d'effacement, de
+  limitation, d'opposition et de portabilité de vos données.
+</p>
+<ul>
+  <li><strong>Pour ce qui vit sur votre téléphone</strong>, ces droits s'exercent
+      directement : le bouton « Réinitialiser » ou la désinstallation effacent
+      tout.</li>
+  <li><strong>Pour vos réponses au questionnaire de bienvenue</strong> conservées sur notre
+      serveur : écrivez-nous à
+      <a href="mailto:harry@jemeditetouslesjours.fr">harry@jemeditetouslesjours.fr</a>
+      pour les consulter, les corriger ou les faire effacer. Si vous avez donné
+      votre adresse e-mail, elle nous permet de retrouver vos réponses ; si vous
+      ne l'avez pas donnée, ces réponses ne sont rattachées qu'à un identifiant
+      anonyme et nous ne pouvons pas les relier à votre personne.</li>
+</ul>
+<p>
+  Vous disposez également du droit d'introduire une réclamation auprès de la
+  <a href="https://www.cnil.fr" rel="noopener">CNIL</a>, autorité française de
+  protection des données.
+</p>
+<p>
+  Pour vos données d'abonnement, vous pouvez vous adresser directement à Apple
+  via votre compte App Store (gestion et résiliation de l'abonnement).
+</p>
+
+<h2>10. Enfants</h2>
+<p>
+  L'application n'est pas destinée aux enfants et ne collecte volontairement
+  aucune donnée les concernant.
+</p>
+
+<h2>11. Modifications</h2>
+<p>
+  Cette politique peut évoluer si l'application change. La date de dernière mise
+  à jour, indiquée en haut de cette page, permet de repérer toute modification.
+</p>
+
+<h2>12. Contact</h2>
+<p>
+  Une question sur cette politique ou sur vos données&nbsp;?<br>
+  <strong>JMG HARRY</strong> — LES GACHOTS, 77510 VERDELOT<br>
+  <a href="mailto:harry@jemeditetouslesjours.fr">harry@jemeditetouslesjours.fr</a>
+</p>
+
+<footer>
+  © 2026 JMG HARRY — Je médite tous les jours. Tous droits réservés.
+</footer>
+
+</main>
 </body>
-
 </html>
