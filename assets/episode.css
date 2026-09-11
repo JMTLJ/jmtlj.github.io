@@ -1,0 +1,190 @@
+:root{
+  --nuit:#161A21; --nuit-800:#1A1F27;
+  --ardoise:#212934; --ardoise-500:#343F4E;
+  --lointain:#89A4C1; --lointain-300:#ABBED6;
+  --terracotta:#C79A6B;
+  --sable:#E8E6E1; --sable-500:#A8B2BC; --sable-400:#8894A0;
+  --creme:#ECE3D2; --encre:#141A22;
+  --texte-sur-image:#D3D9E0;
+  --verre:rgba(232,230,225,.05); --verre-fort:rgba(232,230,225,.08);
+  --verre-bord:rgba(232,230,225,.10); --verre-bord-fort:rgba(232,230,225,.18);
+  --lisere:rgba(137,164,193,.24);
+  --xs:4px; --sm:8px; --md:12px; --lg:16px; --xl:24px; --section:32px;
+  --gouttiere:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+/* « hidden » sur un <svg> : la feuille du navigateur ne l'applique pas
+   partout (l'attribut est HTML, l'élément ne l'est pas), et les deux pictos
+   du bouton s'empilaient. La règle est explicite pour cette raison-là. */
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--nuit); color:var(--sable);
+  font-family:'Plus Jakarta Sans',-apple-system,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  min-height:100svh; position:relative; overflow-x:hidden;
+}
+::selection{background:rgba(137,164,193,.30);color:var(--sable)}
+.ciel{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(52rem 40rem at 50% 10rem,rgba(137,164,193,.09),transparent 62%),
+    radial-gradient(80rem 56rem at 85% -14rem,rgba(107,138,165,.05),transparent 60%);
+}
+a{color:inherit}
+.enveloppe{position:relative;z-index:1;max-width:33rem;margin:0 auto;padding:var(--xl) var(--gouttiere) var(--section)}
+
+/* Le fil d'Ariane : une seule ligne, le nom du podcast, qui ramène au site. */
+.retour{
+  display:inline-flex;align-items:center;gap:var(--sm);
+  font-size:.8125rem;font-weight:600;letter-spacing:.01em;
+  color:var(--sable-400);text-decoration:none;
+}
+.retour:hover{color:var(--lointain-300)}
+.retour svg{flex:none;opacity:.8}
+
+/* L'illustration, dans le même cadre de verre que la pochette de la landing. */
+.cadre{
+  margin:var(--xl) auto 0;width:min(78vw,296px);
+  background:var(--verre);border:1px solid var(--lisere);border-radius:28px;padding:10px;
+  box-shadow:0 30px 80px -24px rgba(0,0,0,.55),0 0 110px rgba(137,164,193,.10);
+}
+.cadre img{display:block;width:100%;height:auto;border-radius:19px;background:var(--ardoise)}
+
+h1{
+  margin-top:var(--section);text-align:center;
+  font-weight:700;font-size:clamp(1.5rem,5.2vw,2rem);line-height:1.14;
+  letter-spacing:-.015em;color:var(--sable);text-wrap:balance;
+}
+.meta{
+  margin-top:var(--md);text-align:center;
+  font-size:.875rem;font-weight:500;letter-spacing:.015em;color:var(--sable-400);
+}
+
+/* LA COTE DE CATALOGUE, sous l'illustration — l'objet que le player pose sous
+   sa fenêtre : un cadre mince, la graisse de titre, des chiffres à chasse
+   fixe. Elle NE REJOINT PAS la ligne de méta. « 14 min · Stress & Anxiété »
+   dit ce qu'est la séance ; la cote dit où elle se range dans le corpus. Deux
+   natures, deux objets — les mêler donnerait à lire une troisième
+   caractéristique, et le player a déjà écarté cet arrangement. */
+.cote{
+  display:block;width:fit-content;margin:var(--xl) auto 0;
+  border:1px solid var(--verre-bord-fort);border-radius:6px;padding:3px 7px;
+  font-size:.71875rem;font-weight:600;letter-spacing:.01em;
+  color:var(--sable-400);font-variant-numeric:tabular-nums;
+}
+/* Le titre garde sa respiration de section quand il n'y a pas de cote (les
+   annonces du podcast n'en ont pas) et se rapproche quand il y en a une : la
+   cote appartient à l'illustration au-dessus, pas au titre en dessous. */
+.cote + h1{margin-top:var(--lg)}
+
+/* ---------- Le lecteur ---------- */
+.lecteur{
+  margin-top:var(--xl);
+  display:flex;align-items:center;gap:var(--lg);
+  background:var(--verre);border:1px solid var(--verre-bord);
+  border-radius:20px;padding:var(--lg);
+}
+.jouer{
+  flex:none;width:56px;height:56px;border-radius:28px;border:0;
+  background:var(--creme);color:var(--encre);
+  display:grid;place-items:center;cursor:pointer;
+  transition:transform .2s cubic-bezier(.22,1,.36,1),opacity .2s ease;
+}
+.jouer:hover{transform:scale(1.04)}
+.jouer:active{transform:scale(.97)}
+.jouer:focus-visible{outline:2px solid var(--lointain-300);outline-offset:3px}
+.jouer[data-charge="1"]{opacity:.55}
+.jouer svg{display:block}
+.piste{flex:1;min-width:0}
+.curseur{
+  -webkit-appearance:none;appearance:none;width:100%;height:22px;
+  background:transparent;cursor:pointer;display:block;
+}
+.curseur::-webkit-slider-runnable-track{
+  height:4px;border-radius:2px;
+  background:linear-gradient(to right,var(--creme) var(--part,0%),var(--ardoise-500,#343F4E) var(--part,0%));
+}
+.curseur::-moz-range-track{height:4px;border-radius:2px;background:#343F4E}
+.curseur::-moz-range-progress{height:4px;border-radius:2px;background:var(--creme)}
+.curseur::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:12px;height:12px;border-radius:6px;
+  background:var(--creme);border:0;margin-top:-4px;
+}
+.curseur::-moz-range-thumb{width:12px;height:12px;border-radius:6px;background:var(--creme);border:0}
+.curseur:focus-visible{outline:2px solid var(--lointain-300);outline-offset:4px;border-radius:4px}
+.temps{
+  display:flex;justify-content:space-between;
+  margin-top:var(--xs);
+  font-size:.75rem;font-weight:500;font-variant-numeric:tabular-nums;color:var(--sable-400);
+}
+
+.mot{
+  margin-top:var(--xl);
+  font-size:1rem;font-weight:400;line-height:1.65;color:var(--texte-sur-image);
+  text-wrap:pretty;
+}
+
+/* ---------- L'app, une fois qu'on a entendu ---------- */
+.app{
+  margin-top:var(--section);padding-top:var(--section);
+  border-top:1px solid var(--verre-bord);text-align:center;
+}
+.app p{
+  font-size:.9375rem;font-weight:500;line-height:1.6;color:var(--sable-500);
+  max-width:26rem;margin:0 auto;text-wrap:balance;
+}
+.ctas{margin-top:var(--xl);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--md)}
+.cta{
+  display:inline-flex;align-items:center;gap:11px;text-align:left;text-decoration:none;
+  white-space:nowrap;border-radius:16px;padding:11px 22px 11px 16px;
+  background:var(--verre-fort);border:1px solid var(--verre-bord-fort);color:var(--sable);
+  transition:transform .25s cubic-bezier(.22,1,.36,1),background .25s ease,border-color .25s ease;
+}
+.cta svg{flex:none;opacity:.92}
+.cta small{display:block;font-size:.6875rem;font-weight:500;letter-spacing:.04em;line-height:1.35;color:var(--sable-500)}
+.cta b{display:block;font-size:1rem;font-weight:700;line-height:1.25}
+.cta:hover{transform:translateY(-2px);background:rgba(232,230,225,.12);border-color:rgba(232,230,225,.26)}
+.cta:active{transform:translateY(0)}
+.cta:focus-visible{outline:2px solid var(--lointain-300);outline-offset:3px}
+
+/* « ÉCOUTER AILLEURS » — LA TROISIÈME SORTIE, ET LA DERNIÈRE. Le smartlink est
+   une page d'Ausha, à son enseigne, dont chaque bouton envoie l'auditeur chez
+   quelqu'un d'autre : elle ne peut pas prendre la forme d'un bouton posé à
+   côté des nôtres, ni celle d'une rangée de logos — six marques alignées
+   seraient l'objet le plus voyant de la page, et la page se mettrait à vendre
+   ses propres sorties. C'est donc une phrase, dans l'encre des légendes, APRÈS
+   les deux magasins : la dernière chose proposée, jamais la première. */
+.ailleurs{
+  margin-top:var(--xl);max-width:22rem;margin-inline:auto;
+  font-size:.8125rem;font-weight:500;line-height:1.6;color:var(--sable-400);
+  text-wrap:balance;
+}
+/* Le lien ne se coupe pas en deux : « … aussi sur les / autres plateformes »
+   donnait un souligné qui commençait au bout d'une ligne et reprenait au début
+   de la suivante. Insécable, il descend d'un bloc quand il ne tient plus. */
+.ailleurs a{
+  white-space:nowrap;
+  color:var(--lointain-300);text-decoration:underline;
+  text-underline-offset:3px;text-decoration-thickness:1px;
+  text-decoration-color:rgba(171,190,214,.45);
+}
+.ailleurs a:hover{text-decoration-color:var(--lointain-300)}
+.ailleurs a:focus-visible{outline:2px solid var(--lointain-300);outline-offset:3px;border-radius:4px}
+
+footer{
+  position:relative;z-index:1;border-top:1px solid var(--verre-bord);
+  padding:var(--section) var(--gouttiere) 48px;text-align:center;
+  font-size:.8125rem;line-height:2;color:var(--sable-400);
+}
+footer a{color:var(--sable-400);text-decoration:none}
+footer a:hover{color:var(--lointain-300)}
+.point{margin:0 .35em}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+@media (max-width:359px){
+  .lecteur{gap:var(--md);padding:var(--md)}
+  .jouer{width:48px;height:48px;border-radius:24px}
+}

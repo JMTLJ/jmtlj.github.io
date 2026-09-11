@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "G9QFPT7E23.com.harryjmg.lebus",
+        "paths": [
+          "/m/*"
+        ],
+        "appIDs": [
+          "G9QFPT7E23.com.harryjmg.lebus"
+        ],
+        "components": [
+          {
+            "/": "/m/*",
+            "comment": "une séance du catalogue"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+# Publier .well-known/ : Jekyll ignore les dossiers en « . » par défaut,
+# et sans eux les Universal Links (iOS) et App Links (Android) sont inertes.
+include: ['.well-known']
